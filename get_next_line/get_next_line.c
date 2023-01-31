@@ -14,14 +14,24 @@
 
 char *ft_read (int fd)
 {
-	static char b[10];
-	static int  i;
+	static char b[BUFFER_SIZE];
+	int  i;
+	int buf_len;
+	char *temp1;
+	char *temp2;
+	char checker;
 
-	b[9] = '\0';
-	rea     d(fd, b, 4);
+	i = 0;
+	b[BUFFER_SIZE - 1] = '\0';
+	read(fd, b, BUFFER_SIZE);
+	buf_len = ft_strlen(b);
+	temp1 = (char *) malloc(buf_len+1)
+	if(b[BUFFER_SIZE] != '\n')
+		while (b[i] != '\n' || b[i] != '\0' || i < buf_len)
+		{
 
-	return (b);
-
+			i++;
+		}
 }
 
 
