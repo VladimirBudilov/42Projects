@@ -1,0 +1,210 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: 42GITS
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/vbudilov/Desktop/42GITS/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target 42GITS
+
+
+#############################################
+# Order-only phony target for 42GITS
+
+build cmake_object_order_depends_target_42GITS: phony || CMakeFiles/42GITS.dir
+
+build CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/get_next_line/get_next_line.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/get_next_line
+
+build CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/get_next_line/get_next_line_utils.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/get_next_line
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstnew.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstadd_front.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstsize.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstlast.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstadd_back.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstdelone.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstiter.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstmap.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+build CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o: C_COMPILER__42GITS_Debug /Users/vbudilov/Desktop/42GITS/Libft/ft_lstclear.c || cmake_object_order_depends_target_42GITS
+  DEP_FILE = CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -fcolor-diagnostics
+  INCLUDES = -I/Users/vbudilov/Desktop/42GITS/Libft
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  OBJECT_FILE_DIR = CMakeFiles/42GITS.dir/Libft
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 42GITS
+
+
+#############################################
+# Link the executable 42GITS
+
+build 42GITS: C_EXECUTABLE_LINKER__42GITS_Debug CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14
+  OBJECT_DIR = CMakeFiles/42GITS.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 42GITS
+  TARGET_PDB = 42GITS.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vbudilov/Desktop/42GITS/cmake-build-debug && "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/vbudilov/Desktop/42GITS/cmake-build-debug && "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/vbudilov/Desktop/42GITS -B/Users/vbudilov/Desktop/42GITS/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/vbudilov/Desktop/42GITS/cmake-build-debug
+
+build all: phony 42GITS
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/vbudilov/Desktop/42GITS/CMakeLists.txt /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/vbudilov/Desktop/42GITS/CMakeLists.txt /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/vbudilov/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

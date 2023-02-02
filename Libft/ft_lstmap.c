@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 22:51:10 by vbudilov          #+#    #+#             */
-/*   Updated: 2023/01/23 22:51:13 by vbudilov         ###   ########.fr       */
+/*   Created: 2023/02/02 19:18:43 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/02/02 19:18:45 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	int		j;
-	char	*str;
+	t_list	*temp;
+	t_list	*new;
 
-	j = 0;
-	str = (char *) s;
-	i = ft_strlen(str);
-	if (!str)
+	if (!lst || !f)
 		return (0);
-	while (str[j])
-		j++;
-	while (i >= 0)
+	new = ft_lstnew((*f)(lst->content));
+	if (!new)
+		return (0);
+	temp = new;
+	lst = lst->next;
+	while (lst)
 	{
-		if (str[j] == (char)c)
-			return (str + j);
-		i--;
-		j--;
+		new->next = ft_lstnew((*f)(lst->content));
+		if (!new->next)
+		{
+			ft_lstdelone(temp, (*del));
+			return (0);
+		}
+		new = new->next;
+		lst = lst->next;
 	}
-	return (0);
+	return (temp);
 }
