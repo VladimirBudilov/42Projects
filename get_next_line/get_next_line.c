@@ -12,38 +12,84 @@
 
 #include "get_next_line.h"
 
-char *ft_read (int fd)
+static void		ft_free_null(char **ptr)
 {
-	static char b[BUFFER_SIZE];
-	int  i;
-	int buf_len;
-	char *temp1;
-	char *temp2;
-	char checker;
-
-	i = 0;
-	b[BUFFER_SIZE - 1] = '\0';
-	read(fd, b, BUFFER_SIZE);
-	buf_len = ft_strlen(b);
-	temp1 = (char *) malloc(buf_len+1)
-	if(b[BUFFER_SIZE] != '\n')
-		while (b[i] != '\n' || b[i] != '\0' || i < buf_len)
-		{
-
-			i++;
-		}
+	if (!ptr || !*ptr)
+		return ;
+	free(*ptr);
+	*ptr = NULL;
 }
 
-
-int main ()
+static void		ft_cpy_exc_buff(char **buff, long long j)
 {
-	int	fd;
+	long long	i;
+	char		tmp[ARG_MAX];
 
-	fd = open("./test1.txt", O_RDONLY);
-	printf("%s", ft_read(fd));
-	printf("%s", ft_read(fd));
-	printf("%s", ft_read(fd));
-	printf("%s", ft_read(fd));
-	close(fd);
-	return (1);
+	i = 0;
+	if (buff[0][j] == '\0')
+		ft_free_null(&*buff);
+	else
+	{
+		while (buff[0][j] != '\0')
+			tmp[i++] = buff[0][j++];
+		tmp[i] = '\0';
+		ft_free_null(&*buff);
+		*buff = ft_strdup(tmp);
+	}
+}
+
+static int		ft_buff2line(char **line, char **buff)
+{
+	long long	i;
+	long long	j;
+	char		tmp[ARG_MAX];
+
+	i = 0;
+	j = 0;
+	while (line[0][i] != '\0')
+	{
+		tmp[i] = line[0][i];
+		i++;
+	}
+	ft_free_null(&*line);
+	while (buff[0][j] != '\0' && buff[0][j] != '\n')
+		tmp[i++] = buff[0][j++];
+	tmp[i] = '\0';
+	*line = ft_strdup(tmp);
+	if (buff[0][j] == '\n')
+	{
+		ft_cpy_exc_buff(&*buff, j + 1);
+		return (FOUND_ENDLINE);
+	}
+	ft_free_null(&*buff);
+	return (NO_ENDLINE);
+}
+
+int				get_next_line(int fd, char **line)
+{
+	static char	*buff[OPEN_MAX];
+	char		tmp[ARG_MAX];
+	int			ret[2];
+
+	if (fd >= 0 && line && BUFFER_SIZE > 0 && (*line = ft_strdup("")))
+	{
+		ret[0] = NO_ENDLINE;
+		while (ret[0] == NO_ENDLINE)
+		{
+			if (buff[fd] == NULL && (ret[1] = read(fd, tmp, BUFFER_SIZE)) >= 0
+			    && (tmp[ret[1]] = '\0') == 0)
+				buff[fd] = ft_strdup(tmp);
+			if (buff[fd] != NULL)
+				ret[1] = ft_strlen(buff[fd]);
+			if (ret[1] < 0)
+				break ;
+			ret[0] = ft_buff2line(&*line, &buff[fd]);
+			if (ret[1] == 0)
+				return (EOF_RCHD);
+		}
+		if (ret[0] == FOUND_ENDLINE)
+			return (READL_OK);
+	}
+	ft_free_null(&*line);
+	return (ERR_HPND);
 }

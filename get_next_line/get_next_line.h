@@ -28,4 +28,14 @@ static  char	*word_dup(const char *str, int start, int finish);
 char	**ft_split(char const *s1, char separator);
 int     ft_strlen(char *str);
 
+# define READL_OK 1
+# define EOF_RCHD 0
+# define ERR_HPND -1
+
+# define NO_ENDLINE 0
+# define FOUND_ENDLINE 1
+
+char	*ft_strdup(const char *s1);
+
+
 #endif //INC_42GITS_GET_NEXT_LINE_H

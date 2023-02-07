@@ -1,3 +1,0 @@
-/Users/vbudilov/Desktop/42GITS/cmake-build-debug/CMakeFiles/42GITS.dir
-/Users/vbudilov/Desktop/42GITS/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/vbudilov/Desktop/42GITS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
