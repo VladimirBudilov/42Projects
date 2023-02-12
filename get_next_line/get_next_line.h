@@ -10,32 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INC_42GITS_GET_NEXT_LINE_H
-#define INC_42GITS_GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
 
+# include <fcntl.h>
 # include <stdio.h>
-#include "stdlib.h"
-# include "unistd.h"
-# include <sys/fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-char    *get_next_line(int fd);
-static  int	count_words(const char *str, char separator);
-static  char	*word_dup(const char *str, int start, int finish);
-char	**ft_split(char const *s1, char separator);
-int     ft_strlen(char *str);
+char	*get_next_line(int fd);
+char	*ft_add_remainder(int fd, char *left_str);
+char	*ft_strchr(char *s, int c);
+char	*ft_strjoin(char *left_str, char *buff);
+size_t	ft_strlen(char *s);
+char	*ft_get_line(char *left_str);
+char	*ft_new_remainder(char *left_str);
 
-# define READL_OK 1
-# define EOF_RCHD 0
-# define ERR_HPND -1
-
-# define NO_ENDLINE 0
-# define FOUND_ENDLINE 1
-
-char	*ft_strdup(const char *s1);
-
-
-#endif //INC_42GITS_GET_NEXT_LINE_H
+#endif

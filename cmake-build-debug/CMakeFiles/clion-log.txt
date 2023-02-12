@@ -1,6 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S A:\42Projects -B A:\42Projects\cmake-build-debug
-CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
-  CMake 3.24 or higher is required.  You are running version 3.23.2
-
-
--- Configuring incomplete, errors occurred!
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe" -G Ninja -S A:\42Projects -B A:\42Projects\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: A:/42Projects/cmake-build-debug

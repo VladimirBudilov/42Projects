@@ -39,14 +39,14 @@ char	*ft_add_remainder(int fd, char *left_str)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*remainder;
+	static char	*left_str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	remainder = ft_add_remainder(fd, remainder);
-	if (!remainder)
+	left_str = ft_add_remainder(fd, left_str);
+	if (!left_str)
 		return (NULL);
-	line = ft_get_line(remainder);
-	remainder = ft_new_remainder(remainder);
+	line = ft_get_line(left_str);
+	left_str = ft_new_remainder(left_str);
 	return (line);
 }

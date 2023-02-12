@@ -1,5 +1,0 @@
-creat funk for read from buffer
-put buffer in static variable
-read buffer from file with "read"
-add funk split
-if end of buffer != \n EoF put in malloc

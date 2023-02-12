@@ -12,78 +12,104 @@
 
 #include "get_next_line.h"
 
-
-static int	count_words(const char *str, char separator)
-{
-	int	amount_of_words;
-	int	trigger;
-
-	amount_of_words = 0;
-	trigger = 0;
-	while (*str)
-	{
-		if (*str != separator && trigger == 0)
-		{
-			trigger = 1;
-			amount_of_words++;
-		}
-		else if (*str == separator)
-			trigger = 0;
-		str++;
-	}
-	return (amount_of_words);
-}
-
-static char	*word_dup(const char *str, int start, int finish)
-{
-	char	*word;
-	int		index;
-
-	index = 0;
-	word = malloc((finish - start + 1) * sizeof(char));
-	while (start < finish)
-		word[index++] = str[start++];
-	word[index] = '\0';
-	return (word);
-}
-
-char	**ft_split(char const *s1, char separator)
+size_t	ft_strlen(char *s)
 {
 	size_t	i;
-	size_t	j;
-	int		index;
-	char	**split_arr;
 
-	split_arr = malloc((count_words(s1, separator) + 1)
-	                   * sizeof(char *));
-	if (!split_arr)
-		return (0);
 	i = 0;
-	j = 0;
-	index = -1;
-	while (i <= ft_strlen(s1))
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strchr(const char *str, int ch)
+{
+	char	c;
+
+	c = (char )ch;
+	while (*str && c != *str)
+		str++;
+	if (c == *str)
+		return ((char *)str);
+	return (0);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*new_str;
+	int		s1_index;
+	int		s2_index;
+
+	if (!s1 || !s2)
+		return (0);
+	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new_str)
+		return (0);
+	s1_index = 0;
+	while (s1[s1_index] != '\0')
 	{
-		if (s1[i] != separator && index < 0)
-			index = i;
-		else if ((s1[i] == separator || i == ft_strlen(s1)) && index >= 0)
-		{
-			split_arr[j++] = word_dup(s1, index, i);
-			index = -1;
-		}
+		new_str[s1_index] = s1[s1_index];
+		s1_index++;
+	}
+	s2_index = 0;
+	while (s2[s2_index] != '\0')
+		new_str[s1_index++] = s2[s2_index++];
+	new_str[s1_index] = '\0';
+	return (new_str);
+}
+
+char	*ft_get_line(char *left_str)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	if (!left_str[i])
+		return (NULL);
+	while (left_str[i] && left_str[i] != '\n')
+		i++;
+	str = (char *)malloc(sizeof(char) * (i + 2));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (left_str[i] && left_str[i] != '\n')
+	{
+		str[i] = left_str[i];
 		i++;
 	}
-	split_arr[j] = 0;
-	return (split_arr);
+	if (left_str[i] == '\n')
+	{
+		str[i] = left_str[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
-int	ft_strlen(char *str)
+char	*ft_new_remainder(char *left_str)
 {
-	int	index;
+	int		i;
+	int		j;
+	char	*str;
 
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
+	i = 0;
+	while (left_str[i] && left_str[i] != '\n')
+		i++;
+	if (!left_str[i])
+	{
+		free(left_str);
+		return (NULL);
+	}
+	str = (char *)malloc(sizeof(char) * (ft_strlen(left_str) - i + 1));
+	if (!str)
+		return (NULL);
+	i++;
+	j = 0;
+	while (left_str[i])
+		str[j++] = left_str[i++];
+	str[j] = '\0';
+	free(left_str);
+	return (str);
 }
-
-
