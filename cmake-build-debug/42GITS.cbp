@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="42GITS"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/vladimir/CLionProjects/42Projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="42GITS">
+				<Option output="/home/vladimir/CLionProjects/42Projects/cmake-build-debug/42GITS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/CLionProjects/42Projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vladimir/CLionProjects/42Projects/get_next_line"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 42GITS"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="42GITS/fast">
+				<Option output="/home/vladimir/CLionProjects/42Projects/cmake-build-debug/42GITS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/vladimir/CLionProjects/42Projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/vladimir/CLionProjects/42Projects/get_next_line"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 42GITS/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/vladimir/CLionProjects/42Projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/vladimir/CLionProjects/42Projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/vladimir/CLionProjects/42Projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_back.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_front.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstclear.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstdelone.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstiter.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstlast.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstmap.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstnew.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/ft_lstsize.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/Libft/get_next_line.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.h">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line_utils.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/get_next_line/main.c">
+			<Option target="42GITS"/>
+		</Unit>
+		<Unit filename="/home/vladimir/CLionProjects/42Projects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

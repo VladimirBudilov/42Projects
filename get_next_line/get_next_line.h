@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE
+# define GET_NEXT_LINE
+
+# include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1000
 # endif
 
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-
 char	*get_next_line(int fd);
-char	*ft_add_remainder(int fd, char *left_str);
-char	*ft_strchr(char *s, int c);
-char	*ft_strjoin(char *left_str, char *buff);
-size_t	ft_strlen(char *s);
-char	*ft_get_line(char *left_str);
-char	*ft_new_remainder(char *left_str);
+char	*ft_read_to_remainder(int fd, char *remainder);
+char	*ft_strchr(char *string, int chr);
+char	*ft_strjoin(char *string, char *buff);
+size_t	ft_strlen(char *string);
+char	*ft_get_line(char *remainder);
+char	*ft_new_remainder(char *remainder);
 
 #endif
