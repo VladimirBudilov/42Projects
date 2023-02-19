@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE
-# define GET_NEXT_LINE
-
-# include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
+#  define BUFFER_SIZE 1
 # endif
+
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
 
 char	*get_next_line(int fd);
 char	*ft_read_to_remainder(int fd, char *remainder);

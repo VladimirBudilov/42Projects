@@ -1,4 +1,4 @@
-/snap/clion/222/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/vladimir/CLionProjects/42Projects -B /home/vladimir/CLionProjects/42Projects/cmake-build-debug
+"/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/vbudilov/Desktop/42Projects -B /Users/vbudilov/Desktop/42Projects/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/vladimir/CLionProjects/42Projects/cmake-build-debug
+-- Build files have been written to: /Users/vbudilov/Desktop/42Projects/cmake-build-debug

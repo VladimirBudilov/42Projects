@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "42GITS::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-42GITS-Debug-35a6ece92a2f089b3a66.json",
+					"jsonFile" : "target-42GITS-Debug-d584247163e4ed8140c3.json",
 					"name" : "42GITS",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/vladimir/CLionProjects/42Projects/cmake-build-debug",
-		"source" : "/home/vladimir/CLionProjects/42Projects"
+		"build" : "/Users/vbudilov/Desktop/42Projects/cmake-build-debug",
+		"source" : "/Users/vbudilov/Desktop/42Projects"
 	},
 	"version" : 
 	{
