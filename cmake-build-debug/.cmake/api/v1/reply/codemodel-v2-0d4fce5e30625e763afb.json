@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.23.2"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "42GITS::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-42GITS-Debug-d584247163e4ed8140c3.json",
+					"jsonFile" : "target-42GITS-Debug-e8ac42699b1ec428430a.json",
 					"name" : "42GITS",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/vbudilov/Desktop/42Projects/cmake-build-debug",
-		"source" : "/Users/vbudilov/Desktop/42Projects"
+		"build" : "A:/42Projects/cmake-build-debug",
+		"source" : "A:/42Projects"
 	},
 	"version" : 
 	{
