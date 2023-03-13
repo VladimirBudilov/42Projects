@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/222/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = /snap/clion/222/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/CLionProjects/42Projects
+CMAKE_SOURCE_DIR = /Users/vbudilov/Desktop/42Projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/CLionProjects/42Projects/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vbudilov/Desktop/42Projects/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/vladimir/CLionProjects/42Projects/cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/222/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/222/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles /home/vladimir/CLionProjects/42Projects/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles /Users/vbudilov/Desktop/42Projects/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -369,6 +369,150 @@ Libft/get_next_line.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/Libft/get_next_line.c.s
 .PHONY : Libft/get_next_line.c.s
 
+ft_printf/format_c_and_s.o: ft_printf/format_c_and_s.c.o
+.PHONY : ft_printf/format_c_and_s.o
+
+# target to build an object file
+ft_printf/format_c_and_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o
+.PHONY : ft_printf/format_c_and_s.c.o
+
+ft_printf/format_c_and_s.i: ft_printf/format_c_and_s.c.i
+.PHONY : ft_printf/format_c_and_s.i
+
+# target to preprocess a source file
+ft_printf/format_c_and_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.i
+.PHONY : ft_printf/format_c_and_s.c.i
+
+ft_printf/format_c_and_s.s: ft_printf/format_c_and_s.c.s
+.PHONY : ft_printf/format_c_and_s.s
+
+# target to generate assembly for a file
+ft_printf/format_c_and_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.s
+.PHONY : ft_printf/format_c_and_s.c.s
+
+ft_printf/format_i_and_d.o: ft_printf/format_i_and_d.c.o
+.PHONY : ft_printf/format_i_and_d.o
+
+# target to build an object file
+ft_printf/format_i_and_d.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o
+.PHONY : ft_printf/format_i_and_d.c.o
+
+ft_printf/format_i_and_d.i: ft_printf/format_i_and_d.c.i
+.PHONY : ft_printf/format_i_and_d.i
+
+# target to preprocess a source file
+ft_printf/format_i_and_d.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.i
+.PHONY : ft_printf/format_i_and_d.c.i
+
+ft_printf/format_i_and_d.s: ft_printf/format_i_and_d.c.s
+.PHONY : ft_printf/format_i_and_d.s
+
+# target to generate assembly for a file
+ft_printf/format_i_and_d.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.s
+.PHONY : ft_printf/format_i_and_d.c.s
+
+ft_printf/format_p.o: ft_printf/format_p.c.o
+.PHONY : ft_printf/format_p.o
+
+# target to build an object file
+ft_printf/format_p.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_p.c.o
+.PHONY : ft_printf/format_p.c.o
+
+ft_printf/format_p.i: ft_printf/format_p.c.i
+.PHONY : ft_printf/format_p.i
+
+# target to preprocess a source file
+ft_printf/format_p.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_p.c.i
+.PHONY : ft_printf/format_p.c.i
+
+ft_printf/format_p.s: ft_printf/format_p.c.s
+.PHONY : ft_printf/format_p.s
+
+# target to generate assembly for a file
+ft_printf/format_p.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_p.c.s
+.PHONY : ft_printf/format_p.c.s
+
+ft_printf/format_u.o: ft_printf/format_u.c.o
+.PHONY : ft_printf/format_u.o
+
+# target to build an object file
+ft_printf/format_u.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_u.c.o
+.PHONY : ft_printf/format_u.c.o
+
+ft_printf/format_u.i: ft_printf/format_u.c.i
+.PHONY : ft_printf/format_u.i
+
+# target to preprocess a source file
+ft_printf/format_u.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_u.c.i
+.PHONY : ft_printf/format_u.c.i
+
+ft_printf/format_u.s: ft_printf/format_u.c.s
+.PHONY : ft_printf/format_u.s
+
+# target to generate assembly for a file
+ft_printf/format_u.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_u.c.s
+.PHONY : ft_printf/format_u.c.s
+
+ft_printf/format_x_and_X.o: ft_printf/format_x_and_X.c.o
+.PHONY : ft_printf/format_x_and_X.o
+
+# target to build an object file
+ft_printf/format_x_and_X.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o
+.PHONY : ft_printf/format_x_and_X.c.o
+
+ft_printf/format_x_and_X.i: ft_printf/format_x_and_X.c.i
+.PHONY : ft_printf/format_x_and_X.i
+
+# target to preprocess a source file
+ft_printf/format_x_and_X.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.i
+.PHONY : ft_printf/format_x_and_X.c.i
+
+ft_printf/format_x_and_X.s: ft_printf/format_x_and_X.c.s
+.PHONY : ft_printf/format_x_and_X.s
+
+# target to generate assembly for a file
+ft_printf/format_x_and_X.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.s
+.PHONY : ft_printf/format_x_and_X.c.s
+
+ft_printf/ft_printf.o: ft_printf/ft_printf.c.o
+.PHONY : ft_printf/ft_printf.o
+
+# target to build an object file
+ft_printf/ft_printf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o
+.PHONY : ft_printf/ft_printf.c.o
+
+ft_printf/ft_printf.i: ft_printf/ft_printf.c.i
+.PHONY : ft_printf/ft_printf.i
+
+# target to preprocess a source file
+ft_printf/ft_printf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.i
+.PHONY : ft_printf/ft_printf.c.i
+
+ft_printf/ft_printf.s: ft_printf/ft_printf.c.s
+.PHONY : ft_printf/ft_printf.s
+
+# target to generate assembly for a file
+ft_printf/ft_printf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.s
+.PHONY : ft_printf/ft_printf.c.s
+
 get_next_line/get_next_line.o: get_next_line/get_next_line.c.o
 .PHONY : get_next_line/get_next_line.o
 
@@ -417,30 +561,6 @@ get_next_line/get_next_line_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.s
 .PHONY : get_next_line/get_next_line_utils.c.s
 
-get_next_line/main.o: get_next_line/main.c.o
-.PHONY : get_next_line/main.o
-
-# target to build an object file
-get_next_line/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/get_next_line/main.c.o
-.PHONY : get_next_line/main.c.o
-
-get_next_line/main.i: get_next_line/main.c.i
-.PHONY : get_next_line/main.i
-
-# target to preprocess a source file
-get_next_line/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/get_next_line/main.c.i
-.PHONY : get_next_line/main.c.i
-
-get_next_line/main.s: get_next_line/main.c.s
-.PHONY : get_next_line/main.s
-
-# target to generate assembly for a file
-get_next_line/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/42GITS.dir/build.make CMakeFiles/42GITS.dir/get_next_line/main.c.s
-.PHONY : get_next_line/main.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -480,15 +600,30 @@ help:
 	@echo "... Libft/get_next_line.o"
 	@echo "... Libft/get_next_line.i"
 	@echo "... Libft/get_next_line.s"
+	@echo "... ft_printf/format_c_and_s.o"
+	@echo "... ft_printf/format_c_and_s.i"
+	@echo "... ft_printf/format_c_and_s.s"
+	@echo "... ft_printf/format_i_and_d.o"
+	@echo "... ft_printf/format_i_and_d.i"
+	@echo "... ft_printf/format_i_and_d.s"
+	@echo "... ft_printf/format_p.o"
+	@echo "... ft_printf/format_p.i"
+	@echo "... ft_printf/format_p.s"
+	@echo "... ft_printf/format_u.o"
+	@echo "... ft_printf/format_u.i"
+	@echo "... ft_printf/format_u.s"
+	@echo "... ft_printf/format_x_and_X.o"
+	@echo "... ft_printf/format_x_and_X.i"
+	@echo "... ft_printf/format_x_and_X.s"
+	@echo "... ft_printf/ft_printf.o"
+	@echo "... ft_printf/ft_printf.i"
+	@echo "... ft_printf/ft_printf.s"
 	@echo "... get_next_line/get_next_line.o"
 	@echo "... get_next_line/get_next_line.i"
 	@echo "... get_next_line/get_next_line.s"
 	@echo "... get_next_line/get_next_line_utils.o"
 	@echo "... get_next_line/get_next_line_utils.i"
 	@echo "... get_next_line/get_next_line_utils.s"
-	@echo "... get_next_line/main.o"
-	@echo "... get_next_line/main.i"
-	@echo "... get_next_line/main.s"
 .PHONY : help
 
 

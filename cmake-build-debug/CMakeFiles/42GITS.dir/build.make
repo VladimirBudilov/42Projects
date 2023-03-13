@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/222/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = /snap/clion/222/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = "/Users/vbudilov/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8617.54/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vladimir/CLionProjects/42Projects
+CMAKE_SOURCE_DIR = /Users/vbudilov/Desktop/42Projects
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vladimir/CLionProjects/42Projects/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/vbudilov/Desktop/42Projects/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/42GITS.dir/depend.make
@@ -70,186 +70,256 @@ include CMakeFiles/42GITS.dir/progress.make
 include CMakeFiles/42GITS.dir/flags.make
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o: /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line_utils.c
+CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o: /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line_utils.c
 CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o -MF CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o.d -o CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o -c /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o -MF CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o.d -o CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.o -c /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line_utils.c
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line_utils.c > CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line_utils.c > CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.i
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line_utils.c -o CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line_utils.c -o CMakeFiles/42GITS.dir/get_next_line/get_next_line_utils.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstnew.c
+CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstnew.c
 CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstnew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstnew.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstnew.c > CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstnew.c > CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstnew.c -o CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstnew.c -o CMakeFiles/42GITS.dir/Libft/ft_lstnew.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_front.c
+CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_front.c
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_front.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_front.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_front.c > CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_front.c > CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_front.c -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_front.c -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_front.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstsize.c
+CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstsize.c
 CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstsize.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstsize.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstsize.c > CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstsize.c > CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstsize.c -o CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstsize.c -o CMakeFiles/42GITS.dir/Libft/ft_lstsize.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstlast.c
+CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstlast.c
 CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstlast.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstlast.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstlast.c > CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstlast.c > CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstlast.c -o CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstlast.c -o CMakeFiles/42GITS.dir/Libft/ft_lstlast.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_back.c
+CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_back.c
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_back.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_back.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_back.c > CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_back.c > CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstadd_back.c -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstadd_back.c -o CMakeFiles/42GITS.dir/Libft/ft_lstadd_back.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstdelone.c
+CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstdelone.c
 CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstdelone.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstdelone.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstdelone.c > CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstdelone.c > CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstdelone.c -o CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstdelone.c -o CMakeFiles/42GITS.dir/Libft/ft_lstdelone.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstiter.c
+CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstiter.c
 CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstiter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstiter.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstiter.c > CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstiter.c > CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstiter.c -o CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstiter.c -o CMakeFiles/42GITS.dir/Libft/ft_lstiter.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstmap.c
+CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstmap.c
 CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstmap.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstmap.c > CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstmap.c > CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstmap.c -o CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstmap.c -o CMakeFiles/42GITS.dir/Libft/ft_lstmap.c.s
 
 CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o: /home/vladimir/CLionProjects/42Projects/Libft/ft_lstclear.c
+CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o: /Users/vbudilov/Desktop/42Projects/Libft/ft_lstclear.c
 CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/ft_lstclear.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o -MF CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o.d -o CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/ft_lstclear.c
 
 CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/ft_lstclear.c > CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/ft_lstclear.c > CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.i
 
 CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/ft_lstclear.c -o CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/ft_lstclear.c -o CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.s
 
 CMakeFiles/42GITS.dir/Libft/get_next_line.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/Libft/get_next_line.c.o: /home/vladimir/CLionProjects/42Projects/Libft/get_next_line.c
+CMakeFiles/42GITS.dir/Libft/get_next_line.c.o: /Users/vbudilov/Desktop/42Projects/Libft/get_next_line.c
 CMakeFiles/42GITS.dir/Libft/get_next_line.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/42GITS.dir/Libft/get_next_line.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/get_next_line.c.o -MF CMakeFiles/42GITS.dir/Libft/get_next_line.c.o.d -o CMakeFiles/42GITS.dir/Libft/get_next_line.c.o -c /home/vladimir/CLionProjects/42Projects/Libft/get_next_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/42GITS.dir/Libft/get_next_line.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/Libft/get_next_line.c.o -MF CMakeFiles/42GITS.dir/Libft/get_next_line.c.o.d -o CMakeFiles/42GITS.dir/Libft/get_next_line.c.o -c /Users/vbudilov/Desktop/42Projects/Libft/get_next_line.c
 
 CMakeFiles/42GITS.dir/Libft/get_next_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/Libft/get_next_line.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/Libft/get_next_line.c > CMakeFiles/42GITS.dir/Libft/get_next_line.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/Libft/get_next_line.c > CMakeFiles/42GITS.dir/Libft/get_next_line.c.i
 
 CMakeFiles/42GITS.dir/Libft/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/Libft/get_next_line.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/Libft/get_next_line.c -o CMakeFiles/42GITS.dir/Libft/get_next_line.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/Libft/get_next_line.c -o CMakeFiles/42GITS.dir/Libft/get_next_line.c.s
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o: /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.c
+CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o: /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line.c
 CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o -MF CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o.d -o CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o -c /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o -MF CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o.d -o CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o -c /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line.c
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.c > CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line.c > CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.i
 
 CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/get_next_line/get_next_line.c -o CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/get_next_line/get_next_line.c -o CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.s
 
-CMakeFiles/42GITS.dir/get_next_line/main.c.o: CMakeFiles/42GITS.dir/flags.make
-CMakeFiles/42GITS.dir/get_next_line/main.c.o: /home/vladimir/CLionProjects/42Projects/get_next_line/main.c
-CMakeFiles/42GITS.dir/get_next_line/main.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/42GITS.dir/get_next_line/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/get_next_line/main.c.o -MF CMakeFiles/42GITS.dir/get_next_line/main.c.o.d -o CMakeFiles/42GITS.dir/get_next_line/main.c.o -c /home/vladimir/CLionProjects/42Projects/get_next_line/main.c
+CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/ft_printf.c
+CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o -MF CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/ft_printf.c
 
-CMakeFiles/42GITS.dir/get_next_line/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/get_next_line/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vladimir/CLionProjects/42Projects/get_next_line/main.c > CMakeFiles/42GITS.dir/get_next_line/main.c.i
+CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/ft_printf.c > CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.i
 
-CMakeFiles/42GITS.dir/get_next_line/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/get_next_line/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vladimir/CLionProjects/42Projects/get_next_line/main.c -o CMakeFiles/42GITS.dir/get_next_line/main.c.s
+CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/ft_printf.c -o CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.s
+
+CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/format_i_and_d.c
+CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o -MF CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/format_i_and_d.c
+
+CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/format_i_and_d.c > CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.i
+
+CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/format_i_and_d.c -o CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.s
+
+CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/format_c_and_s.c
+CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o -MF CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/format_c_and_s.c
+
+CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/format_c_and_s.c > CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.i
+
+CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/format_c_and_s.c -o CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.s
+
+CMakeFiles/42GITS.dir/ft_printf/format_u.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/format_u.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/format_u.c
+CMakeFiles/42GITS.dir/ft_printf/format_u.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/42GITS.dir/ft_printf/format_u.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/format_u.c.o -MF CMakeFiles/42GITS.dir/ft_printf/format_u.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/format_u.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/format_u.c
+
+CMakeFiles/42GITS.dir/ft_printf/format_u.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/format_u.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/format_u.c > CMakeFiles/42GITS.dir/ft_printf/format_u.c.i
+
+CMakeFiles/42GITS.dir/ft_printf/format_u.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/format_u.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/format_u.c -o CMakeFiles/42GITS.dir/ft_printf/format_u.c.s
+
+CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/format_x_and_X.c
+CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o -MF CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/format_x_and_X.c
+
+CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/format_x_and_X.c > CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.i
+
+CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/format_x_and_X.c -o CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.s
+
+CMakeFiles/42GITS.dir/ft_printf/format_p.c.o: CMakeFiles/42GITS.dir/flags.make
+CMakeFiles/42GITS.dir/ft_printf/format_p.c.o: /Users/vbudilov/Desktop/42Projects/ft_printf/format_p.c
+CMakeFiles/42GITS.dir/ft_printf/format_p.c.o: CMakeFiles/42GITS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/42GITS.dir/ft_printf/format_p.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/42GITS.dir/ft_printf/format_p.c.o -MF CMakeFiles/42GITS.dir/ft_printf/format_p.c.o.d -o CMakeFiles/42GITS.dir/ft_printf/format_p.c.o -c /Users/vbudilov/Desktop/42Projects/ft_printf/format_p.c
+
+CMakeFiles/42GITS.dir/ft_printf/format_p.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42GITS.dir/ft_printf/format_p.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbudilov/Desktop/42Projects/ft_printf/format_p.c > CMakeFiles/42GITS.dir/ft_printf/format_p.c.i
+
+CMakeFiles/42GITS.dir/ft_printf/format_p.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42GITS.dir/ft_printf/format_p.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbudilov/Desktop/42Projects/ft_printf/format_p.c -o CMakeFiles/42GITS.dir/ft_printf/format_p.c.s
 
 # Object files for target 42GITS
 42GITS_OBJECTS = \
@@ -265,7 +335,12 @@ CMakeFiles/42GITS.dir/get_next_line/main.c.s: cmake_force
 "CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o" \
 "CMakeFiles/42GITS.dir/Libft/get_next_line.c.o" \
 "CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o" \
-"CMakeFiles/42GITS.dir/get_next_line/main.c.o"
+"CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o" \
+"CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o" \
+"CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o" \
+"CMakeFiles/42GITS.dir/ft_printf/format_u.c.o" \
+"CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o" \
+"CMakeFiles/42GITS.dir/ft_printf/format_p.c.o"
 
 # External object files for target 42GITS
 42GITS_EXTERNAL_OBJECTS =
@@ -282,10 +357,15 @@ CMakeFiles/42GITS.dir/get_next_line/main.c.s: cmake_force
 42GITS: CMakeFiles/42GITS.dir/Libft/ft_lstclear.c.o
 42GITS: CMakeFiles/42GITS.dir/Libft/get_next_line.c.o
 42GITS: CMakeFiles/42GITS.dir/get_next_line/get_next_line.c.o
-42GITS: CMakeFiles/42GITS.dir/get_next_line/main.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/ft_printf.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/format_i_and_d.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/format_c_and_s.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/format_u.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/format_x_and_X.c.o
+42GITS: CMakeFiles/42GITS.dir/ft_printf/format_p.c.o
 42GITS: CMakeFiles/42GITS.dir/build.make
 42GITS: CMakeFiles/42GITS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable 42GITS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable 42GITS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/42GITS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -297,6 +377,6 @@ CMakeFiles/42GITS.dir/clean:
 .PHONY : CMakeFiles/42GITS.dir/clean
 
 CMakeFiles/42GITS.dir/depend:
-	cd /home/vladimir/CLionProjects/42Projects/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vladimir/CLionProjects/42Projects /home/vladimir/CLionProjects/42Projects /home/vladimir/CLionProjects/42Projects/cmake-build-debug /home/vladimir/CLionProjects/42Projects/cmake-build-debug /home/vladimir/CLionProjects/42Projects/cmake-build-debug/CMakeFiles/42GITS.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/vbudilov/Desktop/42Projects/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vbudilov/Desktop/42Projects /Users/vbudilov/Desktop/42Projects /Users/vbudilov/Desktop/42Projects/cmake-build-debug /Users/vbudilov/Desktop/42Projects/cmake-build-debug /Users/vbudilov/Desktop/42Projects/cmake-build-debug/CMakeFiles/42GITS.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/42GITS.dir/depend
 
