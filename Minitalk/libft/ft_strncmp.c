@@ -3,29 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 09:40:20 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:47:47 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:47:49 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t max_size)
 {
-	size_t	i;
-	char	*my_s1;
-	char	*my_s2;
+	size_t	index;
 
-	i = 0;
-	my_s1 = (char *)(s1);
-	my_s2 = (char *)(s2);
-	if (n > 0)
+	if (max_size == 0)
+		return (0);
+	index = 0;
+	while (s1[index] == s2[index] && s1[index] != '\0')
 	{
-		while (my_s1[i] == my_s2[i] && (my_s1[i] || my_s2[i]) && i < n - 1)
-			i++;
-		return ((unsigned char)(my_s1[i]) - (unsigned char)(my_s2[i]));
+		if (index < (max_size - 1))
+			index++;
+		else
+			return (0);
 	}
-	return (0);
+	return ((unsigned char)(s1[index]) - (unsigned char)(s2[index]));
 }

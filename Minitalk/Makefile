@@ -1,105 +1,32 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/09 11:40:59 by ysoroko           #+#    #+#              #
-#    Updated: 2021/07/09 14:37:04 by ysoroko          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+SOURCES = server.c client.c
+OBJECTS = $(SOURCES:.c=.o)
 
-# ------------------------------ Sources ------------------------------
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
-# Files
-SERVER		=	ft_server/ft_server.c
+all: server client
 
-CLIENT		=	ft_client/ft_client.c
+bonus: server client
 
-LIBFT		=	cd libft && make
+server: server.o libft
+	$(CC) -o $@ $< -Llibft -lft
 
-LIB			=	libft/libft.a
+client: client.o libft
+	$(CC) -o $@ $< -Llibft -lft
 
-# Sources and objects
-SERVER_SRC	=	$(SERVER)
+%.o: %.c
+	$(CC) -c $(CFLAGS) $?
 
-SERVER_OBJS	=	$(SERVER_SRC:.c=.o)
-
-CLIENT_SRC	=	$(CLIENT)
-
-CLIENT_OBJS	=	$(CLIENT_SRC:.c=.o)
-
-OBJS		=	$(CLIENT_OBJS) \
-				$(SERVER_OBJS)
-
-# ------------------------------ Constant strings ------------------------------
-
-GCC			=	gcc
-
-FLAGS		=	-Wall -Wextra -Werror
-
-INCLUDE		=	-I include
-
-SERVER_NAME	=	server
-
-CLIENT_NAME	=	client
-
-NAME		=	server
-
-# ------------------------------ Colors ------------------------------
-
-BOLD_PURPLE	=	\033[1;35m
-
-BOLD_CYAN	=	\033[1;36m
-
-BOLD_YELLOW	=	\033[1;33m
-
-NO_COLOR	=	\033[0m
-
-# ------------------------------ Messages ------------------------------
-
-COMP_START	=	echo "\n🚧 $(BOLD_YELLOW)Make: $(NO_COLOR)Starting the compilation...\n"
-
-SERV_READY	=	echo "\n📥 Server ready!\n"
-
-CLI_READY	=	echo "\n📟 Client ready!\n"
-
-CLEANED		=	echo "\n💧 $(BOLD_YELLOW)Clean: $(NO_COLOR)Removed all the \".o\" files \n"
-
-FCLEANED	=	echo "\n🧼 $(BOLD_YELLOW)Fclean: $(NO_COLOR)Removed the executables \n"
-
-# ------------------------------ Rules ------------------------------
-
-all: $(NAME)
-
-$(NAME): comp_start ft_server ft_client
-
-comp_start:
-	@$(COMP_START)
-	@$(LIBFT)
-
-ft_server: $(SERVER_OBJS)
-	@$(GCC) $(FLAGS) $(SERVER_OBJS) $(LIB) -o $(SERVER_NAME)
-	@$(SERV_READY)
-
-ft_client: $(CLIENT_OBJS)
-	@$(GCC) $(FLAGS) $(CLIENT_OBJS) $(LIB) -o $(CLIENT_NAME)
-	@$(CLI_READY)
+libft:
+	make -C libft
 
 clean:
-	@rm -rf $(OBJS)
-	@cd libft && make clean
-	@$(CLEANED)
-
+	rm -f $(OBJECTS)
+	make -C libft clean
+	
 fclean: clean
-	@rm -rf $(SERVER_NAME) $(CLIENT_NAME)
-	@cd libft && make fclean
-	@$(FCLEANED)
+	rm -f server client libft/libft.a
 
-.c.o:
-	@${GCC} ${FLAGS} $(INCLUDE) -c $< -o ${<:.c=.o}
+re: fclean all
 
-re:	fclean all
-
-.PHONY: all minitalk server client clean fclean re libft
+.PHONY: all bonus libft clean fclean re

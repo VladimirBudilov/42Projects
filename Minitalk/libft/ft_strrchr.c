@@ -3,37 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 09:40:35 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:51:10 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:51:13 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t		str_len;
-	char		*my_s;
+	int		i;
+	int		j;
+	char	*str;
 
-	str_len = ft_strlen(s);
-	my_s = (char *)(s);
-	if ((char)(c) == '\0')
+	j = 0;
+	str = (char *) s;
+	i = ft_strlen(str);
+	if (!str)
+		return (0);
+	while (str[j])
+		j++;
+	while (i >= 0)
 	{
-		return (&my_s[str_len]);
-	}
-	while (str_len > 0)
-	{
-		if (my_s[str_len] == (char)(c))
-		{
-			return (&my_s[str_len]);
-		}
-		str_len--;
-	}
-	if (my_s[str_len] == (char)(c))
-	{
-		return (my_s);
+		if (str[j] == (char)c)
+			return (str + j);
+		i--;
+		j--;
 	}
 	return (0);
 }

@@ -3,20 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 09:39:48 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 21:58:00 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 21:58:06 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
-
-int	ft_isprint(int c)
+int	ft_isprint(int arg)
 {
-	if (c >= ' ' && c <= '~')
-	{
-		return (!0);
-	}
+	if (arg >= 32 && arg <= 126)
+		return (1);
 	return (0);
 }

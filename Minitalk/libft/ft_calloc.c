@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 12:51:00 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 21:38:20 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 21:48:20 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t number, size_t size)
 {
-	size_t	total_size;
-	void	*ret;
+	void	*arr;
 
-	total_size = size * count;
-	ret = malloc(total_size);
-	if (ret == 0)
-	{
+	arr = (char *)malloc(size * number);
+	if (!arr)
 		return (0);
-	}
-	ft_bzero(ret, total_size);
-	return (ret);
+	ft_memset(arr, 0, (size * number));
+	return (arr);
 }

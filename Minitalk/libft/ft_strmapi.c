@@ -3,35 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 18:03:29 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:45:52 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:45:55 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *string, char (*map_funk)(unsigned int, char))
 {
-	char			*temp_s;
-	char			*my_s;
-	unsigned int	i;
-	int				len;
+	char			*str;
+	unsigned int	index;
 
-	if (!s || !f)
+	index = 0;
+	if (!string || !map_funk)
 		return (0);
-	temp_s = (char *)s;
-	i = 0;
-	len = ft_strlen(temp_s);
-	my_s = malloc(sizeof(char) * (len + 1));
-	if (!my_s)
+	str = ft_strdup(string);
+	if (!str)
 		return (0);
-	my_s[len] = '\0';
-	while (temp_s[i] != '\0')
+	while (str[index])
 	{
-		my_s[i] = f(i, temp_s[i]);
-		i++;
+		str[index] = map_funk(index, str[index]);
+		index++;
 	}
-	return (my_s);
+	return (str);
 }

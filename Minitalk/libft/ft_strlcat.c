@@ -3,36 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 10:51:55 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:39:31 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:39:37 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include "./include/libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t max_size)
 {
-	size_t		i;
-	size_t		j;
-	char		*my_src;
-	int			dst_len;
+	size_t	src_index;
+	size_t	dst_index;
+	size_t	dst_len;
+	size_t	src_len;
 
-	my_src = (char *)(src);
-	dst_len = ft_strlen(dst);
-	i = dst_len;
-	j = 0;
-	if (i >= dstsize || dstsize == 0)
+	dst_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	src_index = 0;
+	dst_index = dst_len;
+	if (dst_len >= max_size)
+		return (max_size + ft_strlen(src));
+	while (src[src_index] && (dst_len + src_index) < max_size - 1)
 	{
-		return (dstsize + ft_strlen(my_src));
+		dest[dst_index] = src[src_index];
+		dst_index++;
+		src_index++;
 	}
-	while (src[j] != '\0' && i < dstsize - 1)
-	{
-		dst[i] = my_src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (dst_len + ft_strlen(my_src));
+	dest[dst_index] = 0;
+	return (dst_len + src_len);
 }

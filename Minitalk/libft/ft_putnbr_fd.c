@@ -3,32 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 13:26:52 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:23:45 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:23:55 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int input_nbr, int fd)
 {
-	unsigned int	m;
+	unsigned int	nbr;
+	unsigned int	temp_nbr;
 
-	m = (unsigned int)n;
-	if (n < 0)
+	temp_nbr = (unsigned int) input_nbr;
+	if (input_nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
-		m *= -1;
-	}
-	if (m >= 10)
-	{
-		ft_putnbr_fd(m / 10, fd);
-		ft_putnbr_fd(m % 10, fd);
+		nbr = temp_nbr * -1;
 	}
 	else
-	{
-		ft_putchar_fd('0' + m, fd);
-	}
+		nbr = temp_nbr;
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd((char)(nbr % 10 + 48), fd);
 }

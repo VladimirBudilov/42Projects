@@ -3,39 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 09:39:00 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:48:49 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:48:51 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t max_size)
 {
-	size_t	i;
-	size_t	j;
-	char	*my_h;
-	char	*my_n;
+	size_t	str_index;
+	size_t	tofind_index;
 
-	i = 0;
-	my_h = (char *)(haystack);
-	my_n = (char *)(needle);
-	if (my_n[0] == '\0')
-		return (my_h);
-	while (my_h[i] != '\0' && i < len)
+	str_index = 0;
+	if (to_find[0] == '\0')
+		return ((char *) str);
+	while (str[str_index])
 	{
-		j = 0;
-		while (my_n[j] == my_h[i + j] && my_h[i + j] && my_n[j] && i + j < len)
+		tofind_index = 0;
+		while (str[str_index + tofind_index] == to_find[tofind_index]
+			&& (str_index + tofind_index) < max_size)
 		{
-			j++;
+			if (str[str_index + tofind_index] == '\0'
+				&& to_find[tofind_index] == '\0')
+				return ((char *)&str[str_index]);
+			tofind_index++;
 		}
-		if (my_n[j] == '\0')
-		{
-			return (&my_h[i]);
-		}
-		i++;
+		if (to_find[tofind_index] == '\0')
+			return ((char *)&str[str_index]);
+		str_index++;
 	}
 	return (0);
 }

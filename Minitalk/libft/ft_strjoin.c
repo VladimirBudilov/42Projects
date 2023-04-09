@@ -3,39 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 13:04:42 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:34:46 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:34:52 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-char	*ft_strjoin(char const *pref, char const *suff)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ret;
-	char	*my_pref;
-	char	*my_suff;
-	size_t	i;
-	size_t	j;
+	char	*new_str;
+	int		s1_index;
+	int		s2_index;
 
-	if (pref == 0 || suff == 0)
+	if (!s1 || !s2)
 		return (0);
-	i = -1;
-	j = -1;
-	my_pref = (char *)(pref);
-	my_suff = (char *)(suff);
-	ret = malloc(sizeof(char) * (ft_strlen(my_pref) + ft_strlen(my_suff) + 1));
-	if (ret == 0)
+	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new_str)
 		return (0);
-	while (pref[++i] != '\0')
-		ret[i] = pref[i];
-	while (suff[++j] != '\0')
+	s1_index = 0;
+	while (s1[s1_index] != '\0')
 	{
-		ret[i] = suff[j];
-		i++;
+		new_str[s1_index] = s1[s1_index];
+		s1_index++;
 	}
-	ret[i] = '\0';
-	return (ret);
+	s2_index = 0;
+	while (s2[s2_index] != '\0')
+		new_str[s1_index++] = s2[s2_index++];
+	new_str[s1_index] = '\0';
+	return (new_str);
 }

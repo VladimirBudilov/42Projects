@@ -3,38 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 13:14:38 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/01/23 22:53:38 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/01/23 22:53:42 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *string, unsigned int start,
+		size_t len_for_new_string)
 {
-	char	*ret;
-	char	*my_s;
-	size_t	i;
+	char		*new_str;
+	size_t		i;
+	size_t		index_new_str;
 
-	if (!s)
+	if (!string)
 		return (0);
-	i = 0;
-	my_s = (char *)(s);
-	if (start >= (unsigned int)(ft_strlen(my_s)))
-	{
-		ret = ft_strdup("");
-		return (ret);
-	}
-	ret = malloc(sizeof(s[start]) * (len + 1));
-	if (ret == 0)
+	if (ft_strlen(string) < len_for_new_string)
+		len_for_new_string = ft_strlen(string);
+	new_str = (char *)malloc(len_for_new_string + 1);
+	if (!new_str)
 		return (0);
-	while (i < len && s[i] != 0)
-	{
-		ret[i] = s[start + i];
-		i++;
-	}
-	ret[i] = 0;
-	return (ret);
+	i = start;
+	index_new_str = 0;
+	while (i < ft_strlen(string) && index_new_str < len_for_new_string)
+		new_str[index_new_str++] = string[i++];
+	new_str[index_new_str] = '\0';
+	return (new_str);
 }

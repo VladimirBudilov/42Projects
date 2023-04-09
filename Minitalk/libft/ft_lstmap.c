@@ -3,38 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysoroko <ysoroko@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 16:12:29 by ysoroko           #+#    #+#             */
-/*   Updated: 2021/07/09 14:41:19 by ysoroko          ###   ########.fr       */
+/*   Created: 2023/02/02 19:18:43 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/02/02 19:18:45 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*current_new;
-	t_list	*current;
+	t_list	*temp;
+	t_list	*new;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (0);
-	new_list = ft_lstnew(f(lst->content));
-	if (!new_list)
+	new = ft_lstnew((*f)(lst->content));
+	if (!new)
 		return (0);
-	current = lst->next;
-	current_new = new_list;
-	while (current != 0)
+	temp = new;
+	lst = lst->next;
+	while (lst)
 	{
-		current_new = ft_lstnew(f(current->content));
-		if (!(current_new))
+		new->next = ft_lstnew((*f)(lst->content));
+		if (!new->next)
 		{
-			ft_lstclear(&new_list, del);
+			ft_lstdelone(temp, (*del));
 			return (0);
 		}
-		ft_lstadd_back(&new_list, current_new);
-		current = current->next;
+		new = new->next;
+		lst = lst->next;
 	}
-	return (new_list);
+	return (temp);
 }
