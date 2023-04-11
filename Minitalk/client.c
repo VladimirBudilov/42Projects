@@ -22,13 +22,13 @@ void	ft_send_bits(int pid, char i)
 	bit = 0;
 	while (bit < 8)
 	{
-		if ((i & (0x01 << bit)) != 0)
+		if ((i & (1 << bit)) != 0)
 			kill(pid, SIGUSR1);
 		else
 		{
 			kill(pid, SIGUSR2);
 		}
-		usleep(100);
+		usleep(1000);
 		bit++;
 	}
 }

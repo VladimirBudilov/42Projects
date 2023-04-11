@@ -20,7 +20,7 @@ void	ft_handler(int signal)
 	static int	i;
 
 	if (signal == SIGUSR1)
-		i |= (0x01 << bit);
+		i |= (1 << bit);
 	bit++;
 	if (bit == 8)
 	{
@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 	(void)argv;
 	if (argc == 1)
 	{
-			pid = getpid();
+		pid = getpid();
 		ft_putnbr_fd(pid, 1);
 		ft_putchar_fd('\n', 1);
 		while (1)
