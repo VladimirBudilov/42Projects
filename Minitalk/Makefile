@@ -6,8 +6,6 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: server client
 
-bonus: server client
-
 server: server.o libft
 	$(CC) -o $@ $< -Llibft -lft
 
@@ -29,4 +27,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus libft clean fclean re
+.PHONY: all libft clean fclean re
