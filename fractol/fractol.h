@@ -3,79 +3,70 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fvieira <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/28 17:09:50 by fvieira           #+#    #+#             */
-/*   Updated: 2022/11/28 17:09:52 by fvieira          ###   ########.fr       */
+/*   Created: 2023/04/23 19:10:37 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/04/23 19:10:39 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
 
-# include "libft/libft.h"
-# include "minilibx-linux/mlx.h"
-# include <math.h>
-# include <stdio.h>
+#	ifndef FRACTOL_H
+#	define FRACTOL_H
 
-# define ESC 65307
+#include <mlx.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-# define LEFT 65361
-# define UP 65362
-# define RIGHT 65363
-# define DOWN 65364
-# define R 114
-# define Z 122
-# define PLUS 65451
-# define MINUS 65453
+#	define WIDTH 600
+#	define HIGHT 600
 
-typedef struct imaginary {
-	double	x;
-	double	y;
-}			t_complex;
+typedef struct		s_t
+{
+	unsigned char	*ch;
+	double			x;
+	double			y;
+	double			x_x;
+	double			y_y;
+	void			*ptr;
+	void			*win;
+	double			x_o;
+	double			y_o;
+	int				itier;
+	double			xtmp;
+	double			ytmp;
+	void			*image;
+	int				size_l;
+	int				bpp;
+	int				endian;
+	int				index;
+	char			*name;
+	double			start_y;
+	double			end_y;
+	double			start_x;
+	double			end_x;
+	int				zoom;
+	int				stop;
+	int				max;
+	int				color;
 
-t_complex	sqr(t_complex a);
-t_complex	add(t_complex a, t_complex b);
+}					t_t;
 
-typedef struct s_fractal {
-	char		*name;
-	void		*img;
-	void		*addr;
-	int			bits_per_pixel;
-	int			line_length;
-	int			endian;
-	void		*mlx;
-	void		*win;
-	int			width;
-	int			height;
-	t_complex	c;
-	double		zoom;
-	double		x;
-	double		y;
-	double		xarrow;
-	double		yarrow;
-	double		radius;
-	int			iterations;
-	int			color;
-}				t_fractal;
+void				mandelbrot(t_t *t);
+void				julia(t_t *t);
+int					mouse_press(int button, int x, int y, t_t *t);
+int					key_press(int keycode, t_t *t);
+void				menu(t_t *t);
+void				itier_loop(t_t *t);
+void				map(t_t *t);
+double				ft_abs(double x);
+void				set_color(t_t *t, int color);
+int					str_cmp(char *s1, char *s2);
+void				check_ar(t_t *t);
+void				init(t_t *t, char *str);
+void				zoom(t_t *t, double x, double y, double zoom);
+void				mlx_ho(t_t *t);
+void				init_x_y(t_t *t);
+void				destroy_exit(t_t *t);
 
-t_complex	mappoint(t_fractal *julia, double x, double y);
-
-void		juliaset(t_fractal *julia);
-void		mandelbrotset(t_fractal *mandel);
-
-int			my_mlx_pixel_put(t_fractal *fractal, int x, int y, int color);
-
-void		fractalsetup(t_fractal *fractal);
-
-void		mandelbrot_param(t_fractal *fractal, char *name);
-void		julia_param(t_fractal *fractal, char *name);
-
-void		ft_zoom(double x, double y, t_fractal *fractal);
-void		ft_dezoom(double x, double y, t_fractal *fractal);
-int			key_hook(int keycode, t_fractal *fractal);
-int			mouse_hook(int key_code, int x, int y, t_fractal *fractal);
-int			close_game(t_fractal *fractal);
-
-int			freeall(t_fractal *fractal);
-#endif
+#	endif

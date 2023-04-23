@@ -1,42 +1,26 @@
 
+CFLAGS = -Wall -Werror -Wextra
+
 NAME = fractol
 
-CC = cc
+CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g 
-MLXFLAGS = -L ./minilibx-linux -lmlx -Ilmlx -lXext -lX11
-LIBFT = ./libft/libft.a
+SRC = event.c fractal.c main.c tools.c
 
-SRC = ft_fractol.c \
-	julia.c \
-	complex_math.c \
-	hooks.c \
-	mandelbrot.c \
-	params.c \
+OBJS = $(SRC:.c=.o)
+
+MLX = -lmlx -framework OpenGL -framework AppKit
 
 
-all: $(NAME)
+all : $(NAME)
 
-$(NAME): $(SRC:.c=.o)
-	$(MAKE) --no-print-directory -C ./libft
+$(NAME) : $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) $(MLX) -o $(NAME)
 
-	$(MAKE) --no-print-directory -C ./minilibx-linux
+clean :
+	@rm -rf $(OBJS)
 
-	$(CC) $(CFLAGS) -lm $(SRC) $(LIBFT) $(MLXFLAGS) -o $(NAME)
+fclean : clean
+	@rm -rf $(NAME)
 
-
-clean:
-	$(MAKE) clean -C ./libft
-	rm -rf $(SRC:.c=.o)
-
-
-fclean: clean
-	$(MAKE) fclean -C ./libft
-	rm -rf $(NAME)
-
-
-re: fclean all
-
-.PHONY: all, clean, fclean, re, bonus
-
-.SILENT:
+re : fclean all
