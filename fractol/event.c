@@ -32,17 +32,20 @@ int			key_press(int keycode, t_t *t)
 	return (1);
 }
 
-void		init_x_y(t_t *t)
-{
-	t->x = ((t->x_x / (double)WIDTH) *
-	(t->end_x - t->start_x)) + t->start_x;
-	t->y = ((t->y_y / (double)HIGHT) *
-	(t->end_y - t->start_y)) + t->start_y;
-}
 
-void		destroy_exit(t_t *t)
+int		destroy_exit(int keycode, t_t *t)
 {
 	mlx_destroy_image(t->ptr, t->image);
 	mlx_destroy_window(t->ptr, t->win);
 	free(t->ptr);
+	return (0);
+}
+
+void		mlx_ho(t_t *t)
+{
+	mlx_put_image_to_window(t->ptr, t->win, t->image, 0, 0);
+	mlx_hook(t->win, 4, 1, mouse_press, t);
+	mlx_hook(t->win, 17, 0, destroy_exit, t);
+	mlx_hook(t->win, 2, 1, key_press, t);
+	mlx_loop(t->ptr);
 }

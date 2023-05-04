@@ -74,10 +74,4 @@ void		zoom(t_t *t, double x, double y, double zoom)
 		t->max += 2;
 }
 
-void		mlx_ho(t_t *t)
-{
-	mlx_put_image_to_window(t->ptr, t->win, t->image, 0, 0);
-	mlx_hook(t->win, 4, 1, mouse_press, t);
-	mlx_hook(t->win, 2, 1, key_press, t);
-	mlx_loop(t->ptr);
-}
+

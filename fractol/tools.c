@@ -25,10 +25,10 @@ int		str_cmp(char *s1, char *s2)
 
 void	set_color(t_t *t, int color)
 {
-	t->index = (4 * 1000 * t->y_y) + t->x_x * 4;
-	t->ch[t->index] = (t->itier * t->color + 680 + 179) * color;
-	t->ch[t->index + 1] = (t->itier * t->color + 42 + 84) * color;
-	t->ch[t->index + 2] = (t->itier * t->color + 936 + 45) * color;
+	t->index = (4 * WIDTH * t->y_y) + t->x_x * 4;
+	t->ch[t->index] = (t->itier * t->color + 580 + 150) * color;
+	t->ch[t->index + 1] = (t->itier * t->color + 32 + 54) * color;
+	t->ch[t->index + 2] = (t->itier * t->color + 736 + 35) * color;
 	t->ch[t->index + 3] = 0;
 }
 
@@ -59,4 +59,12 @@ void	itier_loop(t_t *t)
 			break ;
 		t->itier++;
 	}
+}
+
+void		init_x_y(t_t *t)
+{
+	t->x = ((t->x_x / (double)WIDTH) *
+	(t->end_x - t->start_x)) + t->start_x;
+	t->y = ((t->y_y / (double)HIGHT) *
+	(t->end_y - t->start_y)) + t->start_y;
 }
