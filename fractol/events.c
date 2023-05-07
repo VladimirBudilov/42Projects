@@ -22,29 +22,19 @@ int			mouse_press(int button, int x, int y, t_t *t)
 	return (1);
 }
 
-int			key_press(int keycode, t_t *t)
+int			press_exit(int keycode, void *f)
 {
-	if (keycode == 53)
-	{
-		destroy_exit(t);
-		exit(0);
-	}
-	return (1);
-}
-
-
-void		destroy_exit(t_t *t)
-{
-	mlx_destroy_image(t->ptr, t->image);
-	mlx_destroy_window(t->ptr, t->win);
-	free(t->ptr);
+	(void)f;
+	(void)keycode;
+	exit(0);
+	return (0);
 }
 
 void		mlx_ho(t_t *t)
 {
 	mlx_put_image_to_window(t->ptr, t->win, t->image, 0, 0);
 	mlx_hook(t->win, 4, 1, mouse_press, t);
-//	mlx_hook(t->win, 17, 0, destroy_exit, t);
-	mlx_hook(t->win, 2, 1, key_press, t);
+	mlx_hook(t->win, 2, 1, press_exit, (void*)0);
+	mlx_hook(t->win, 17, 1L<<2, press_exit, (void*)0);
 	mlx_loop(t->ptr);
 }

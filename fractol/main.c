@@ -13,35 +13,6 @@
 
 #include "fractol.h"
 
-
-void		init(t_t *t, char *str)
-{
-	t->start_x = -2;
-	t->end_x = 2;
-	t->start_y = -2;
-	t->end_y = 2;
-	t->x_o = -0.4;
-	t->y_o = 0.6;
-	t->zoom = 0;
-	t->stop = 0;
-	t->max = 80;
-	t->color = 30;
-	t->name = str;
-}
-
-void		check_ar(t_t *t)
-{
-	if (str_cmp(t->name, "mandelbrot") == 0)
-		mandelbrot(t);
-	else if (str_cmp(t->name, "julia") == 0)
-		julia(t);
-	else
-	{
-		write(1, "usage: ./fractol <name>", 23);
-		write(1, "\tmandelbrot\tjulia\n", 19);
-	}
-}
-
 int			main(int ac, char *av[])
 {
 	t_t		t;

@@ -32,46 +32,16 @@ void		julia(t_t *t)
 		}
 		t->y_y++;
 	}
-	mlx_ho(t);
-}
-
-void		mandelbrot(t_t *t)
-{
-	mlx_clear_window(t->ptr, t->win);
-	t->y_y = 0;
-	while (t->y_y < HIGHT)
-	{
-		t->x_x = 0;
-		while (t->x_x < WIDTH)
-		{
-			t->itier = 0;
-			map(t);
-			itier_loop(t);
-			if (t->itier == t->max)
-				set_color(t, 0);
-			else
-				set_color(t, 1);
-			t->x_x++;
-		}
-		t->y_y++;
-	}
 	t->stop = 1;
 	mlx_ho(t);
 }
 
-void		zoom(t_t *t, double x, double y, double zoom)
+void		init_x_y(t_t *t)
 {
-	double	xx;
-	double	yy;
-
-	xx = ((x / WIDTH) * (t->end_x - t->start_x)) + t->start_x;
-	yy = ((y / HIGHT) * (t->end_y - t->start_y)) + t->start_y;
-	t->start_x = xx + ((t->start_x - xx) * zoom);
-	t->start_y = yy + ((t->start_y - yy) * zoom);
-	t->end_y = yy + ((t->end_y - yy) * zoom);
-	t->end_x = xx + ((t->end_x - xx) * zoom);
-	if (t->max <= 120)
-		t->max += 2;
+	t->x = ((t->x_x / (double)WIDTH) *
+	(t->end_x - t->start_x)) + t->start_x;
+	t->y = ((t->y_y / (double)HIGHT) *
+	(t->end_y - t->start_y)) + t->start_y;
 }
 
 

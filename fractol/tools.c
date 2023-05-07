@@ -12,41 +12,37 @@
 
 
 #include "fractol.h"
-
-int		str_cmp(char *s1, char *s2)
+void		init(t_t *t, char *str)
 {
-	int	i;
+	t->start_x = -2;
+	t->end_x = 2;
+	t->start_y = -2;
+	t->end_y = 2;
+	t->x_o = -0.4;
+	t->y_o = 0.6;
+	t->zoom = 0;
+	t->stop = 0;
+	t->max = 80;
+	t->color = 30;
+	t->name = str;
+}
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
-		i++;
-	return (s1[i] - s2[i]);
+void		check_ar(t_t *t)
+{
+	if (str_cmp(t->name, "mandelbrot") == 0)
+		mandelbrot(t);
+	else if (str_cmp(t->name, "julia") == 0)
+		julia(t);
 }
 
 void	set_color(t_t *t, int color)
 {
 	t->index = (4 * WIDTH * t->y_y) + t->x_x * 4;
-	t->ch[t->index] = (t->itier * t->color + 580 + 150) * color;
+	t-h>c[t->index] = (t->itier * t->color + 580 + 150) * color;
 	t->ch[t->index + 1] = (t->itier * t->color + 32 + 54) * color;
 	t->ch[t->index + 2] = (t->itier * t->color + 736 + 35) * color;
 	t->ch[t->index + 3] = 0;
 }
-
-double	ft_abs(double x)
-{
-	if (x < 0)
-		return (-x);
-	return (x);
-}
-
-void	map(t_t *t)
-{
-	t->x = t->x_x / (WIDTH / (t->end_x - t->start_x)) + t->start_x;
-	t->y = t->y_y / (HIGHT / (t->end_y - t->start_y)) + t->start_y;
-	t->x_o = t->x;
-	t->y_o = t->y;
-}
-
 void	itier_loop(t_t *t)
 {
 	while (t->itier < t->max)
@@ -61,10 +57,27 @@ void	itier_loop(t_t *t)
 	}
 }
 
-void		init_x_y(t_t *t)
+void		zoom(t_t *t, double x, double y, double zoom)
 {
-	t->x = ((t->x_x / (double)WIDTH) *
-	(t->end_x - t->start_x)) + t->start_x;
-	t->y = ((t->y_y / (double)HIGHT) *
-	(t->end_y - t->start_y)) + t->start_y;
+	double	xx;
+	double	yy;
+
+	xx = ((x / WIDTH) * (t->end_x - t->start_x)) + t->start_x;
+	yy = ((y / HIGHT) * (t->end_y - t->start_y)) + t->start_y;
+	t->start_x = xx + ((t->start_x - xx) * zoom);
+	t->start_y = yy + ((t->start_y - yy) * zoom);
+	t->end_y = yy + ((t->end_y - yy) * zoom);
+	t->end_x = xx + ((t->end_x - xx) * zoom);
+	if (t->max <= 120)
+		t->max += 2;
+}
+
+int		str_cmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }

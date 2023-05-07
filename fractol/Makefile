@@ -5,7 +5,7 @@ NAME = fractol
 
 CC = gcc
 
-SRC = event.c fractal.c main.c tools.c
+SRC = events.c julia.c main.c tools.c mandelbrot.c
 
 OBJS = $(SRC:.c=.o)
 
