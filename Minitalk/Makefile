@@ -1,22 +1,26 @@
+NAME = server
+NAME1 = client
+LIBFT = ./libft/libft.a
+LIBFT_DIR = ./libft
 SOURCES = server.c client.c
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-all: server client
+all: $(LIBFT) $(NAME) $(NAME1) 
 
-server: server.o libft
+$(NAME): server.o 
 	$(CC) -o $@ $< -Llibft -lft
 
-client: client.o libft
+$(NAME1): client.o 
 	$(CC) -o $@ $< -Llibft -lft
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
-libft:
-	make -C libft
+$(LIBFT):
+	make -C $(LIBFT_DIR)
 
 clean:
 	rm -f $(OBJECTS)

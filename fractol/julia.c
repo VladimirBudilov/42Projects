@@ -12,47 +12,41 @@
 
 #include "fractol.h"
 
-void	julia(t_t *t)
+void	julia(t_f *f)
 {
-	mlx_clear_window(t->ptr, t->win);
-	t->y_y = 0;
-	while (t->y_y < WIDTH)
+	mlx_clear_window(f->ptr, f->win);
+	f->y_y = 0;
+	while (f->y_y < WIDTH)
 	{
-		t->x_x = 0;
-		while (t->x_x < HIGHT)
+		f->x_x = 0;
+		while (f->x_x < HIGHT)
 		{
-			t->itier = 0;
-			init_x_y(t);
-			itier_loop(t);
-			if (t->itier == t->max)
-				set_color(t, 0);
+			f->itier = 0;
+			init_x_y(f);
+			iter_loop(f);
+			if (f->itier == f->max)
+				set_color(f, 0);
 			else
-				set_color(t, 1);
-			t->x_x++;
+				set_color(f, 1);
+			f->x_x++;
 		}
-		t->y_y++;
+		f->y_y++;
 	}
-	t->stop = 1;
-	mlx_ho(t);
+	f->stop = 1;
+	ft_mlx_hooks(f);
 }
 
-void	init_x_y(t_t *t)
+void	init_julia(t_f *f, char *str, double x, double y)
 {
-	t->x = ((t->x_x / (double)WIDTH) * (t->end_x - t->start_x)) + t->start_x;
-	t->y = ((t->y_y / (double)HIGHT) * (t->end_y - t->start_y)) + t->start_y;
-}
-
-void	init_julia(t_t *t, char *str, double x, double y)
-{
-	t->start_x = -2;
-	t->end_x = 2;
-	t->start_y = -2;
-	t->end_y = 2;
-	t->x_o = x;
-	t->y_o = y;
-	t->zoom = 0;
-	t->stop = 0;
-	t->max = 80;
-	t->color = 30;
-	t->name = str;
+	f->start_x = -2;
+	f->end_x = 2;
+	f->start_y = -2;
+	f->end_y = 2;
+	f->x_o = x;
+	f->y_o = y;
+	f->zoom = 0;
+	f->stop = 0;
+	f->max = 80;
+	f->color = 30;
+	f->name = str;
 }

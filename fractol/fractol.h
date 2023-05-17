@@ -20,7 +20,7 @@
 # define WIDTH 600
 # define HIGHT 600
 
-typedef struct s_t
+typedef struct set
 {
 	unsigned char	*ch;
 	double			x;
@@ -32,8 +32,8 @@ typedef struct s_t
 	double			x_o;
 	double			y_o;
 	int				itier;
-	double			xtmp;
-	double			ytmp;
+	double			x_tmp;
+	double			y_tmp;
 	void			*image;
 	int				size_l;
 	int				bpp;
@@ -49,25 +49,34 @@ typedef struct s_t
 	int				max;
 	int				color;
 
-}					t_t;
+}					t_f;
 
-void				mandelbrot(t_t *t);
-void				julia(t_t *t);
-void				init_julia(t_t *t, char *str, double x, double y);
-void				init(t_t *t, char *str);
-int					mouse_press(int button, int x, int y, t_t *t);
-int					key_press(int keycode, t_t *t);
-void				menu(t_t *t);
-void				itier_loop(t_t *t);
-void				map(t_t *t);
+typedef struct res
+{
+	double	result;
+	int		sign;
+	int		decimal;
+	double	decimal_place;
+}					t_res;
+
+void				create_standard_fractal(t_f *f, char *name);
+void				create_julia_with_params(t_f *f, char *name,
+						char *x, char *y);
+void				mandelbrot(t_f *f);
+void				julia(t_f *f);
+void				init_julia(t_f *f, char *str, double x, double y);
+void				init(t_f *f, char *str);
+int					mouse_press(int button, int x, int y, t_f *f);
+void				iter_loop(t_f *f);
+void				map_x_y(t_f *f);
 double				ft_atof(char *str);
-void				set_color(t_t *t, int color);
-int					str_cmp(char *s1, char *s2);
-void				check_ar(t_t *t);
-void				zoom(t_t *t, double x, double y, double zoom);
-void				mlx_ho(t_t *t);
-void				init_x_y(t_t *t);
-void				destroy_exit(t_t *t);
+void				set_color(t_f *f, int color);
+int					ft_str_cmp(char *s1, char *s2);
+void				check_set(t_f *f);
+void				zoom(t_f *f, double x, double y, double zoom);
+void				ft_mlx_hooks(t_f *f);
+void				init_x_y(t_f *f);
 int					ft_str_isdigit(char *str);
+int					ft_exit(int keycode, void *f);
 
 #	endif

@@ -24,7 +24,7 @@ void	ft_handler(int signal)
 	bit++;
 	if (bit == 8)
 	{
-		ft_putchar_fd(i, 1);
+		write(1, &i, 1);
 		bit = 0;
 		i = 0;
 	}

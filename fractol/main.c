@@ -12,41 +12,20 @@
 
 #include "fractol.h"
 
-int	main(int ac, char *av[])
+int	main(int argc, char *argv[])
 {
-	t_t	t;
-	double	x;
-	double	y;
+	t_f	f;
 
-	if (ac == 2)
+	if (argc == 2)
+		create_standard_fractal(&f, argv[1]);
+	else if (argc == 4 && ft_str_cmp(argv[1], "julia") == 0)
 	{
-		if (str_cmp(av[1], "mandelbrot") == 0 || str_cmp(av[1], "julia") == 0)
-		{
-			t.ptr = mlx_init();
-			t.win = mlx_new_window(t.ptr, WIDTH, HIGHT, "Fractol");
-			t.image = mlx_new_image(t.ptr, WIDTH, HIGHT);
-			t.ch = (unsigned char *)mlx_get_data_addr(t.image,
-					&t.bpp, &t.size_l, &t.endian);
-			init(&t, av[1]);
-		}
-		check_ar(&t);
-	}
-	else if (ac == 4 && str_cmp(av[1], "julia") == 0)
-	{
-		if (!ft_str_isdigit(av[2]) || !ft_str_isdigit(av[3]))
+		if (!ft_str_isdigit(argv[2]) || !ft_str_isdigit(argv[3]))
 		{
 			write(1, "Error", 5);
 			return (0);
 		}
-		t.ptr = mlx_init();
-		t.win = mlx_new_window(t.ptr, WIDTH, HIGHT, "Fractol");
-		t.image = mlx_new_image(t.ptr, WIDTH, HIGHT);
-		t.ch = (unsigned char *)mlx_get_data_addr(t.image, &t.bpp,
-				&t.size_l, &t.endian);
-		x = ft_atof(av[2]);
-		y = ft_atof(av[3]);
-		init_julia(&t, av[1], x, y);
-		check_ar(&t);
+		create_julia_with_params(&f, argv[1], argv[2], argv[3]);
 	}
 	else
 	{
@@ -54,4 +33,29 @@ int	main(int ac, char *av[])
 		write(1, "\tmandelbrot\tjulia\n", 19);
 	}
 	return (0);
+}
+
+void	create_standard_fractal(t_f *f, char *name)
+{
+	if (ft_str_cmp(name, "mandelbrot") == 0 || ft_str_cmp(name, "julia") == 0)
+	{
+		f->ptr = mlx_init();
+		f->win = mlx_new_window(f->ptr, WIDTH, HIGHT, "Fractol");
+		f->image = mlx_new_image(f->ptr, WIDTH, HIGHT);
+		f->ch = (unsigned char *)mlx_get_data_addr(f->image,
+				&f->bpp, &f->size_l, &f->endian);
+		init(f, name);
+	}
+	check_set(f);
+}
+
+void	create_julia_with_params(t_f *f, char *name, char *x, char *y)
+{
+	f->ptr = mlx_init();
+	f->win = mlx_new_window(f->ptr, WIDTH, HIGHT, "Fractol");
+	f->image = mlx_new_image(f->ptr, WIDTH, HIGHT);
+	f->ch = (unsigned char *)mlx_get_data_addr(f->image, &f->bpp,
+			&f->size_l, &f->endian);
+	init_julia(f, name, ft_atof(x), ft_atof(y));
+	check_set(f);
 }

@@ -6,38 +6,46 @@
 /*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/23 19:09:21 by vbudilov          #+#    #+#             */
-/*   Updated: 2023/04/23 19:09:28 by vbudilov         ###   ########.fr       */
+/*   Updated: 2023/05/15 20:07:00 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	zoom(t_t *t, double x, double y, double zoom)
+void	zoom(t_f *f, double x, double y, double zoom)
 {
 	double	xx;
 	double	yy;
 
-	xx = ((x / WIDTH) * (t->end_x - t->start_x)) + t->start_x;
-	yy = ((y / HIGHT) * (t->end_y - t->start_y)) + t->start_y;
-	t->start_x = xx + ((t->start_x - xx) * zoom);
-	t->start_y = yy + ((t->start_y - yy) * zoom);
-	t->end_y = yy + ((t->end_y - yy) * zoom);
-	t->end_x = xx + ((t->end_x - xx) * zoom);
-	if (t->max <= 120)
-		t->max += 2;
+	xx = ((x / WIDTH) * (f->end_x - f->start_x)) + f->start_x;
+	yy = ((y / HIGHT) * (f->end_y - f->start_y)) + f->start_y;
+	f->start_x = xx + ((f->start_x - xx) * zoom);
+	f->start_y = yy + ((f->start_y - yy) * zoom);
+	f->end_y = yy + ((f->end_y - yy) * zoom);
+	f->end_x = xx + ((f->end_x - xx) * zoom);
+	if (f->max <= 600)
+		f->max += 2;
 }
 
-int	mouse_press(int button, int x, int y, t_t *t)
+int	mouse_press(int button, int x, int y, t_f *f)
 {
-	if (button == 5 && t->stop == 1)
-		zoom(t, (double)x, (double)y, 1.1);
-	else if (button == 4 && t->stop == 1)
-		zoom(t, (double)x, (double)y, 0.9);
-	check_ar(t);
+	if (button == 5 && f->stop == 1)
+		zoom(f, (double)x, (double)y, 1.1);
+	else if (button == 4 && f->stop == 1)
+		zoom(f, (double)x, (double)y, 0.9);
+	check_set(f);
 	return (1);
 }
 
 int	press_exit(int keycode, void *f)
+{
+	(void)f;
+	if (keycode == 53)
+		exit(0);
+	return (0);
+}
+
+int	ft_exit(int keycode, void *f)
 {
 	(void)f;
 	(void)keycode;
@@ -45,11 +53,11 @@ int	press_exit(int keycode, void *f)
 	return (0);
 }
 
-void	mlx_ho(t_t *t)
+void	ft_mlx_hooks(t_f *f)
 {
-	mlx_put_image_to_window(t->ptr, t->win, t->image, 0, 0);
-	mlx_hook(t->win, 4, 1, mouse_press, t);
-	mlx_hook(t->win, 2, 1, press_exit, (void *)0);
-	mlx_hook(t->win, 17, 1L << 2, press_exit, (void *)0);
-	mlx_loop(t->ptr);
+	mlx_put_image_to_window(f->ptr, f->win, f->image, 0, 0);
+	mlx_hook(f->win, 4, 1, mouse_press, f);
+	mlx_hook(f->win, 2, 1, press_exit, (void *)0);
+	mlx_hook(f->win, 17, 1L << 2, ft_exit, (void *)0);
+	mlx_loop(f->ptr);
 }

@@ -1,11 +1,10 @@
+NAME = fractol
 
 CFLAGS = -Wall -Werror -Wextra
 
-NAME = fractol
-
 CC = gcc
 
-SRC = events.c julia.c main.c tools.c mandelbrot.c
+SRC = main.c events.c julia.c mandelbrot.c tools.c mini_libft.c
 
 OBJS = $(SRC:.c=.o)
 

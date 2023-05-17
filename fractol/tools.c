@@ -10,92 +10,56 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "fractol.h"
 
-void		check_ar(t_t *t)
+void	check_set(t_f *f)
 {
-	if (str_cmp(t->name, "mandelbrot") == 0)
-		mandelbrot(t);
-	else if (str_cmp(t->name, "julia") == 0)
-		julia(t);
+	if (ft_str_cmp(f->name, "mandelbrot") == 0)
+		mandelbrot(f);
+	else if (ft_str_cmp(f->name, "julia") == 0)
+		julia(f);
 }
 
-void	set_color(t_t *t, int color)
+void	set_color(t_f *f, int color)
 {
-	t->index = (4 * WIDTH * t->y_y) + t->x_x * 4;
-	t->ch[t->index] = (t->itier * t->color + 580 + 150) * color;
-	t->ch[t->index + 1] = (t->itier * t->color + 32 + 54) * color;
-	t->ch[t->index + 2] = (t->itier * t->color + 736 + 35) * color;
-	t->ch[t->index + 3] = 0;
+	f->index = (4 * WIDTH * f->y_y) + f->x_x * 4;
+	f->ch[f->index] = (f->itier * f->color + 480 + 150) * color;
+	f->ch[f->index + 1] = (f->itier * f->color + 32 + 24) * color;
+	f->ch[f->index + 2] = (f->itier * f->color + 736 + 35) * color;
+	f->ch[f->index + 3] = 0;
 }
-void	itier_loop(t_t *t)
+
+void	iter_loop(t_f *f)
 {
-	while (t->itier < t->max)
+	while (f->itier < f->max)
 	{
-		t->xtmp = t->x * t->x - t->y * t->y;
-		t->ytmp = 2 * t->x * t->y;
-		t->x = t->xtmp + t->x_o;
-		t->y = t->ytmp + t->y_o;
-		if (t->x * t->x + t->y * t->y > 4)
+		f->x_tmp = f->x * f->x - f->y * f->y;
+		f->y_tmp = 2 * f->x * f->y;
+		f->x = f->x_tmp + f->x_o;
+		f->y = f->y_tmp + f->y_o;
+		if (f->x * f->x + f->y * f->y > 4)
 			break ;
-		t->itier++;
+		f->itier++;
 	}
 }
 
-int		str_cmp(char *s1, char *s2)
+void	init(t_f *f, char *str)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
-		i++;
-	return (s1[i] - s2[i]);
+	f->start_x = -2;
+	f->end_x = 2;
+	f->start_y = -2;
+	f->end_y = 2;
+	f->x_o = -0.4;
+	f->y_o = 0.6;
+	f->zoom = 0;
+	f->stop = 0;
+	f->max = 80;
+	f->color = 30;
+	f->name = str;
 }
 
-double ft_atof(char *str) {
-    double result = 0.0;
-    int sign = 1;
-    int decimal = 0;
-    double decimal_place = 1.0;
-    
-    if (*str == '-') {
-        sign = -1;
-        str++;
-    }
-    
-    while (*str != '\0')
-    {
-        if (*str >= '0' && *str <= '9')
-        {
-            result = result * 10.0 + (*str - '0');
-            if (decimal)
-                decimal_place /= 10.0;
-        }
-        else if (*str == '.')
-            decimal = 1;
-        else
-            break;
-        str++;
-    }
-    
-    result *= sign;
-    if (decimal) {
-        result *= decimal_place;
-    }
-    return result;
-}
-
-int	ft_str_isdigit(char *str)
+void	init_x_y(t_f *f)
 {
-    while(*str)
-    {
-        if ((*str >= '0' && *str <= '9') || *str == '.' || *str == '-')
-		{
-            str++;
-            continue;
-        }
-    	return (0);
-    }
-	return 1;
+	f->x = ((f->x_x / (double)WIDTH) * (f->end_x - f->start_x)) + f->start_x;
+	f->y = ((f->y_y / (double)HIGHT) * (f->end_y - f->start_y)) + f->start_y;
 }
