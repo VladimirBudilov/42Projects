@@ -1,5 +1,6 @@
 
 #include "../includes/push_swap.h"
+#include <stdio.h>
 
 void add_to_list_from_str_with_space(t_list **head, char *string)
 {
@@ -15,12 +16,20 @@ void add_to_list_from_str_with_space(t_list **head, char *string)
 
 	length = ft_count_words(string, ' ');
 	temp_array = ft_split(string, ' ');
-	while (index <= length)
+	while (index < length)
 	{
-		if (current == NULL)
-			current = *head;
 		temp_number = ft_atoi(temp_array[index]);
-		current = ft_lstnew(temp_number);
+        if (current == NULL)
+        {
+            if(*head == NULL)
+            {
+                *head = ft_lstnew(temp_number);
+                index++;
+                continue;
+            }
+            current = *head;
+        }
+        current = ft_lstnew(temp_number);
 		ft_lstadd_back(head,current);
 		current = current->next;
 		index++;

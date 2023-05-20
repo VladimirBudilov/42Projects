@@ -19,6 +19,7 @@
 typedef struct s_list
 {
 	int			content;
+	int			index;
 	struct s_list	*next;
 }							t_list;
 
@@ -70,7 +71,7 @@ void			ft_putstr_fd(char *input_str, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int input_nbr, int fd);
 
-long long int		ft_atoi(const char *str);
+int		        ft_atoi(const char *str);
 char			*ft_itoa(int n);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 

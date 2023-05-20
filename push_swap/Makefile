@@ -1,14 +1,21 @@
 NAME	= push_swap
 
 CC		= gcc
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -g
 
 SRC_PATH = sources/
 OBJ_PATH = objects/
 LIBFT = ./libft/libft.a
 LIBFT_DIR = ./libft
 
-SRC		= main.c validation_tools.c work_with_lists.c
+SRC		=  generic_stack_sorting_functions.c  \
+           generic_stak_functions.c \
+           main.c \
+           stack_a_funk.c \
+           stack_b_funk.c \
+           stak_both_functions.c \
+           validation_tools.c \
+           work_with_lists.c
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
 OBJS	= $(addprefix $(OBJ_PATH), $(OBJ))
