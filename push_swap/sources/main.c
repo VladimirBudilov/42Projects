@@ -8,9 +8,12 @@ int main(int argc, char *argv[])
 	int index;
 	int temp_number;
 	t_list *a;
+	t_list *b;
     t_list *cursor;
+    int sqrt_len;
 
 	a = NULL;
+    b= NULL;
     cursor = NULL;
     index = 1;
 	if (argc == 1)
@@ -44,13 +47,38 @@ int main(int argc, char *argv[])
         if (has_repeat(&a))
 			return (1);
 		add_index(&a);
-		//rotate_a(&a);
-		while (a != NULL)
-		{
-			printf("a->content = %d\n", a->content);
-			printf("a->index = %d\n", a->index);
-			a = a->next;
-		}
+        t_list *temp_cursor;
+        temp_cursor = a;
+
+        while (temp_cursor != NULL)
+        {
+            printf("index: %d , content %d\n", temp_cursor->index, temp_cursor->content);
+            temp_cursor = temp_cursor->next;
+        }
+
+        if(!list_is_sorted(&a))
+        {
+            if (ft_lstsize(a) == 2)
+                sort_2_nodes(&a);
+            else if (ft_lstsize(a) == 3)
+                sort_3_nodes(&a);
+            else if (ft_lstsize(a) == 4)
+                sort_4_nodes(&a, &b);
+            else if (ft_lstsize(a) == 5)
+                sort_5_nodes(&a, &b);
+            else
+            {
+                sqrt_len = ft_sqrt(ft_lstsize(a));
+                butterfly_sorting(&a, &b, sqrt_len);
+
+            }
+        }
+        temp_cursor = a;
+        while (temp_cursor!= NULL)
+        {
+            printf("index: %d , content %d\n", temp_cursor->index, temp_cursor->content);
+            temp_cursor = temp_cursor->next;
+        }
 	}
 	return (0);
 }

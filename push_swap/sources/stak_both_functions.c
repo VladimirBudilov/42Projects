@@ -16,19 +16,19 @@ void	swap_both(t_list **stack_a, t_list **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_putstr_fd("ss", 1);
+	ft_putstr_fd("ss\n", 1);
 }
 
 void	rotate_both(t_list **stack_a, t_list **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_putstr_fd("rr", 1);
+	ft_putstr_fd("rr\n", 1);
 }
 
 void	reverse_rotate_both(t_list **stack_a, t_list **stack_b)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	ft_putstr_fd("rrr", 1);
+	ft_putstr_fd("rrr\n", 1);
 }

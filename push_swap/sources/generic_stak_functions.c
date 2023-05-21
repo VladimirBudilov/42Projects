@@ -14,8 +14,14 @@
 
 void	push(t_list **source_stack, t_list **dest_stack)
 {
-	ft_lstadd_front(dest_stack, *source_stack);
-	*source_stack = (*source_stack)->next;
+    t_list	*temp;
+
+    if (*source_stack == NULL)
+        return ;
+    temp = *source_stack;
+    *source_stack = (*source_stack)->next;
+    temp->next = *dest_stack;
+    *dest_stack = temp;
 }
 
 void	reverse(t_list **stack)
@@ -37,49 +43,43 @@ void	reverse(t_list **stack)
 
 void	swap(t_list **stack)
 {
-	t_list	*first;
-	t_list	*second;
-	t_list	*remaining;
+    t_list	*first;
+    t_list	*second;
 
-	if (ft_lstsize(*stack) <= 1)
-		return ;
-	first = *stack;
-	second = first->next;
-	second->next = first;
-	remaining = second->next;
-	first->next = remaining;
-	*stack = second;
+    first = *stack;
+    second = (*stack)->next;
+    first->next = second->next;
+    second->next = first;
+    *stack = second;
 }
 
 void	rotate(t_list **stack)
 {
-	t_list	*prev_last;
-	t_list	*current;
+    t_list	*first_node;
+    t_list	*temp_node;
 
-	prev_last = NULL;
-	current = *stack;
-	while (current->next != NULL)
-	{
-		prev_last = current;
-		current = current->next;
-	}
-	current->next = *stack;
-	*stack = current;
-	prev_last->next = NULL;
+    first_node = *stack;
+    *stack = (*stack)->next;
+    first_node->next = NULL;
+    temp_node = *stack;
+    while (temp_node->next != NULL)
+        temp_node = temp_node->next;
+    temp_node->next = first_node;
 }
 
 void	reverse_rotate(t_list **stack)
 {
-	t_list	*last_node;
-	t_list	*temp_node;
+t_list	*last_node;
+    t_list	*temp_node;
 
-	last_node = ft_lstlast(*stack);
-	ft_lstadd_front(stack, last_node);
-	temp_node = (*stack)->next;
-	while (temp_node != NULL)
-	{
-		if (temp_node->next == last_node)
-			temp_node->next = NULL;
-		temp_node = temp_node->next;
-	}
+    last_node = *stack;
+    temp_node = *stack;
+    while (last_node->next != NULL)
+    {
+        temp_node = last_node;
+        last_node = last_node->next;
+    }
+    temp_node->next = NULL;
+    last_node->next = *stack;
+    *stack = last_node;
 }

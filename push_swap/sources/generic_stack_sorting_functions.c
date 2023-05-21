@@ -5,10 +5,13 @@ int	list_is_sorted(t_list **stack)
 	t_list	*current;
 
 	current = *stack;
-	while (current->next != NULL)
+	while (current != NULL)
 	{
-		if (current->content < current->next->content)
-			return (0);
+		if( current->next != NULL)
+        {
+            if (current->index > current->next->index)
+                return (0);
+        }
 		current = current->next;
 	}
 	return (1);

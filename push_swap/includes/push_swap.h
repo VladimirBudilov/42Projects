@@ -44,7 +44,18 @@ void			reverse_rotate_b(t_list **b);
 void			ft_error(void);
 void			add_index(t_list **stack);
 int				list_is_sorted(t_list **stack);
-
+void            push_smallest_node_to_stack_b_4(t_list **a, t_list **b);
+void            push_smallest_node_to_stack_b_5(t_list **a, t_list **b);
+t_list          *find_smallest_node(t_list **stack);
+void            sort_5_nodes(t_list **a, t_list **b);
+void    	    sort_4_nodes(t_list **a, t_list **b);
+void	        sort_3_nodes(t_list **stack);
+void	        sort_2_nodes(t_list **stack);
+void            butterfly_sorting(t_list **stack_a, t_list **stack_b, int sqrt_len);
+int             sqrt_len(t_list *stack);
+int             ft_sqrt(int nb);
+int             ft_find_max(t_list *stack);
+void        	ft_function_i_wrote(t_list **stack_a, t_list **stack_b);
 
 
 
