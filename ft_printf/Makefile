@@ -1,6 +1,4 @@
-SRCS = 	ft_printf.c format_c_and_s.c format_i_and_d.c \
-		format_p.c format_u.c format_x_and_X.c
-
+SRCS = 	ft_printf.c format_c_and_s.c format_i_and_d.c format_p.c format_u.c format_x_and_X.c
 
 OBJS = $(SRCS:.c=.o)
 

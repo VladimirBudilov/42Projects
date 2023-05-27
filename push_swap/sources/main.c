@@ -1,89 +1,85 @@
-#include <stdbool.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/22 17:06:43 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/05/22 17:06:47 by vbudilov         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-
-
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int index;
-	int temp_number;
-	t_list *a;
-	t_list *b;
-    t_list *cursor;
-    int sqrt_len;
+	int		index;
+	t_list	*a;
+	t_list	*b;
 
 	a = NULL;
-    b= NULL;
-    cursor = NULL;
-    index = 1;
+	b = NULL;
+	index = 1;
 	if (argc == 1)
 		return (1);
 	if (argc >= 2)
 	{
-        while (index < argc)
-        {
-			if (has_space(argv[index]))
-			{
-				if(!str_is_correct(argv[index]))
-                    return (1);
-                add_to_list_from_str_with_space(&a, argv[index]);
-				index++;
-				continue;
-			}
-			if (!is_valid(argv[index]))
-                return (1);
-            temp_number = atoi(argv[index]);
-            if(a == NULL)
-			{
-				a = ft_lstnew(temp_number);
-				index++;
-				continue;
-			}
-			cursor = ft_lstnew(temp_number);
-			ft_lstadd_back(&a, cursor);
-
-            index++;
-        }
-        if (has_repeat(&a))
-			return (1);
+		while (index < argc)
+		{
+			create_list(&a, argv[index]);
+			index++;
+		}
+		if (has_repeat(&a))
+			ft_error(&a);
 		add_index(&a);
-        t_list *temp_cursor;
-        temp_cursor = a;
-
-        while (temp_cursor != NULL)
-        {
-            printf("index: %d , content %d\n", temp_cursor->index, temp_cursor->content);
-            temp_cursor = temp_cursor->next;
-        }
-
-        if(!list_is_sorted(&a))
-        {
-            if (ft_lstsize(a) == 2)
-                sort_2_nodes(&a);
-            else if (ft_lstsize(a) == 3)
-                sort_3_nodes(&a);
-            else if (ft_lstsize(a) == 4)
-                sort_4_nodes(&a, &b);
-            else if (ft_lstsize(a) == 5)
-                sort_5_nodes(&a, &b);
-            else
-            {
-                sqrt_len = ft_sqrt(ft_lstsize(a));
-                butterfly_sorting(&a, &b, sqrt_len);
-
-            }
-        }
-        temp_cursor = a;
-        while (temp_cursor!= NULL)
-        {
-            printf("index: %d , content %d\n", temp_cursor->index, temp_cursor->content);
-            temp_cursor = temp_cursor->next;
-        }
+		if (!list_is_sorted(&a))
+			do_sort(&a, &b);
+		free_stack(&a);
+		free_stack(&b);
 	}
 	return (0);
 }
 
+void	do_sort(t_list **stack_a, t_list **stack_b)
+{
+	int	sqrt_len;
 
+	if (ft_lstsize(*stack_a) == 2)
+		sort_2_nodes(stack_a);
+	else if (ft_lstsize(*stack_a) == 3)
+		sort_3_nodes(stack_a);
+	else if (ft_lstsize(*stack_a) == 4)
+		sort_4_nodes(stack_a, stack_b);
+	else if (ft_lstsize(*stack_a) == 5)
+		sort_5_nodes(stack_a, stack_b);
+	else
+	{
+		sqrt_len = ft_sqrt(ft_lstsize(*stack_a));
+		butterfly_sorting(stack_a, stack_b, sqrt_len);
+		push_all_to_stack_a(stack_a, stack_b);
+	}
+}
 
+void	create_list(t_list **stack, char *number)
+{
+	int		temp_number;
+	t_list	*cursor;
 
-
+	if (has_space(number))
+	{
+		if (!str_is_correct(number, stack))
+			ft_error(stack);
+		add_to_list_from_str_with_space(stack, number);
+		return ;
+	}
+	if (!is_valid(number, stack))
+		ft_error(stack);
+	temp_number = atoi(number);
+	if (stack == NULL)
+	{
+		*stack = ft_lstnew(temp_number);
+	}
+	cursor = ft_lstnew(temp_number);
+	ft_lstadd_back(stack, cursor);
+}

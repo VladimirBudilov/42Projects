@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   generic_stak_functions.c                           :+:      :+:    :+:   */
+/*   generic_stack_functions.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,14 +14,12 @@
 
 void	push(t_list **source_stack, t_list **dest_stack)
 {
-    t_list	*temp;
+	t_list	*temp;
 
-    if (*source_stack == NULL)
-        return ;
-    temp = *source_stack;
-    *source_stack = (*source_stack)->next;
-    temp->next = *dest_stack;
-    *dest_stack = temp;
+	temp = *source_stack;
+	*source_stack = (*source_stack)->next;
+	temp->next = *dest_stack;
+	*dest_stack = temp;
 }
 
 void	reverse(t_list **stack)
@@ -43,43 +41,43 @@ void	reverse(t_list **stack)
 
 void	swap(t_list **stack)
 {
-    t_list	*first;
-    t_list	*second;
+	t_list	*first;
+	t_list	*second;
 
-    first = *stack;
-    second = (*stack)->next;
-    first->next = second->next;
-    second->next = first;
-    *stack = second;
+	first = *stack;
+	second = (*stack)->next;
+	first->next = second->next;
+	second->next = first;
+	*stack = second;
 }
 
 void	rotate(t_list **stack)
 {
-    t_list	*first_node;
-    t_list	*temp_node;
+	t_list	*first;
+	t_list	*last;
 
-    first_node = *stack;
-    *stack = (*stack)->next;
-    first_node->next = NULL;
-    temp_node = *stack;
-    while (temp_node->next != NULL)
-        temp_node = temp_node->next;
-    temp_node->next = first_node;
+	first = *stack;
+	last = *stack;
+	while (last->next != NULL)
+		last = last->next;
+	*stack = first->next;
+	first->next = NULL;
+	last->next = first;
 }
 
 void	reverse_rotate(t_list **stack)
 {
-t_list	*last_node;
-    t_list	*temp_node;
+	t_list	*last_node;
+	t_list	*temp_node;
 
-    last_node = *stack;
-    temp_node = *stack;
-    while (last_node->next != NULL)
-    {
-        temp_node = last_node;
-        last_node = last_node->next;
-    }
-    temp_node->next = NULL;
-    last_node->next = *stack;
-    *stack = last_node;
+	last_node = *stack;
+	temp_node = *stack;
+	while (last_node->next != NULL)
+	{
+		temp_node = last_node;
+		last_node = last_node->next;
+	}
+	temp_node->next = NULL;
+	last_node->next = *stack;
+	*stack = last_node;
 }

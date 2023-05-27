@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   validation_tools(part3).c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 21:21:54 by vbudilov          #+#    #+#             */
-/*   Updated: 2023/01/23 21:37:23 by vbudilov         ###   ########.fr       */
+/*   Created: 2023/05/22 17:54:46 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/05/22 17:54:48 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_atoi(const char *str)
+int	is_validate_atoi(const char *str)
 {
-	int	index;
-	int	sign;
-	int	res;
+	int				index;
+	long long int	sign;
+	long long int	res;
 
 	index = 0;
 	sign = 1;
@@ -34,6 +34,17 @@ int	ft_atoi(const char *str)
 	{
 		res = (res * 10) + (str[index] - '0');
 		index++;
+		if (check_overflow(res, sign))
+			return (0);
 	}
-	return (res * sign);
+	return (1);
+}
+
+int	check_overflow(long long int res, long long int sign)
+{
+	if (res * sign > INT_MAX)
+		return (1);
+	if (res * sign < INT_MIN)
+		return (1);
+	return (0);
 }

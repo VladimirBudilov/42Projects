@@ -27,7 +27,7 @@ void	ft_put_char(int ch)
 	write(1, &ch, 1);
 }
 
-int	lsft_print_char(int ch)
+int	ft_print_char(int ch)
 {
 	ft_put_char(ch);
 	return (1);
