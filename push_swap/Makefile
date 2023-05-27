@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/22 18:56:15 by vbudilov          #+#    #+#              #
+#    Updated: 2023/05/22 18:56:17 by vbudilov         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	= push_swap
 
 CC		= gcc
@@ -10,14 +22,17 @@ LIBFT_DIR = ./libft
 
 SRC		=  butterfly_sort.c\
            butterfly_sort_tools.c\
+           first_five_functions_tools.c\
            first_five_sort_functions.c\
+           generic_stack_functions.c\
            generic_stack_sorting_functions.c\
-           generic_stak_functions.c\
            main.c\
            stack_a_funk.c\
            stack_b_funk.c\
-           stak_both_functions.c\
-           validation_tools.c\
+           stack_both_functions.c\
+           validation_tools_part1.c\
+           validation_tools_part2.c\
+           validation_tools_part3.c\
            work_with_lists.c
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))

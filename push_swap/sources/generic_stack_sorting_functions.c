@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   generic_stack_sorting_functions.c                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/22 17:32:07 by vbudilov          #+#    #+#             */
+/*   Updated: 2023/05/22 17:32:08 by vbudilov         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
 int	list_is_sorted(t_list **stack)
@@ -7,11 +19,11 @@ int	list_is_sorted(t_list **stack)
 	current = *stack;
 	while (current != NULL)
 	{
-		if( current->next != NULL)
-        {
-            if (current->index > current->next->index)
-                return (0);
-        }
+		if (current->next != NULL)
+		{
+			if (current->index > current->next->index)
+				return (0);
+		}
 		current = current->next;
 	}
 	return (1);

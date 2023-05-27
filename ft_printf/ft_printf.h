@@ -6,7 +6,7 @@
 /*   By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 11:54:52 by vbudilov          #+#    #+#             */
-/*   Updated: 2023/02/19 11:54:55 by vbudilov         ###   ########.fr       */
+/*   Updated: 2023/03/05 11:00:25 by vbudilov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include "ft_printf.h"
-# include "stdio.h"
 
 int		ft_printf(const char *str, ...);
 int		get_format(va_list ap, char format);
