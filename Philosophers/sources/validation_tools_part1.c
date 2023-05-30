@@ -1,12 +1,25 @@
+#include <stdbool.h>
 #include "../includes/philosophers.h"
+
+void validate_args(int argc, char **string)
+{
+	if (argc < 5 || argc > 6)
+	{
+		ft_error();
+	}
+	if (!is_valid(string[1]) || !is_valid(string[2]) || !is_valid(string[3]) || !is_valid(string[4]))
+	{
+		ft_error();
+	}
+	if (argc == 6 && !is_valid(string[5]))
+	{
+		ft_error();
+	}
+}
 
 int	is_valid(char *string)
 {
 	if (!ft_strisdigit(string))
-	{
-		return (0);
-	}
-	if (!is_valid_number(string))
 	{
 		return (0);
 	}
@@ -30,33 +43,35 @@ int	ft_strisdigit(char *string)
 	return (1);
 }
 
-int	is_valid_number(char *string)
+int ft_isdigit(char i)
 {
-	if (is_validate_atoi(string))
+	if (i >= '0' && i <= '9')
 		return (1);
 	else
 		return (0);
 }
 
-int	has_repeat(t_list **stack)
+int ft_atoi(char *string)
 {
-	t_list	*current_node;
-	t_list	*compare_node;
+	int i;
+	int sign;
+	long long int res;
 
-	current_node = *stack;
-	while (current_node != NULL)
+	i = 0;
+	sign = 1;
+	res = 0;
+	if (string[i] == '-')
+		sign = -1;
+	while (string[i] >= '0' && string[i] <= '9')
 	{
-		compare_node = current_node->next;
-		while (compare_node != NULL)
-		{
-			if (compare_node->content == current_node->content)
-			{
-				ft_error(stack);
-				return (1);
-			}
-			compare_node = compare_node->next;
-		}
-		current_node = current_node->next;
+		res = res * 10 + string[i] - '0';
+		i++;
 	}
-	return (0);
+	return (res * sign);
+}
+
+void	ft_error()
+{
+	write(2, "Error\n", 6);
+	exit(1);
 }

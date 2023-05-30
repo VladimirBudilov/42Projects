@@ -10,17 +10,20 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= push_swap
+NAME	= philosophers
 
 CC		= gcc
 CFLAGS	= -Wall -Werror -Wextra -g
 
 SRC_PATH = sources/
 OBJ_PATH = objects/
-LIBFT = ./libft/libft.a
-LIBFT_DIR = ./libft
 
-SRC		=
+SRC		= forks.c\
+          main.c\
+          main_tools.c\
+          validation_tools_part1.c\
+          tests.c
+
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
@@ -35,18 +38,15 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 $(OBJ_PATH):
 	mkdir $(OBJ_PATH)
 
-$(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-$(LIBFT):
-	make -C $(LIBFT_DIR)
 
 clean:
 	rm -rf $(OBJ_PATH)
-	make -C libft clean
 
 fclean: clean
-	rm -f $(NAME) libft/libft.a
+	rm -f $(NAME)
 
 re: fclean all
 
