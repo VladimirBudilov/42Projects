@@ -1,11 +1,11 @@
 #include "../includes/philosophers.h"
 
 
-void print_all(t_philosophers_data *pData, t_forks_array *forks)
+void print_all(t_philosophers_data *pData)
 {
 	print_main_data(pData);
 	printf("\n");
-	print_forks_id(pData,forks);
+	print_forks_id(pData);
 	printf("\n");
 	print_philosophers_data(pData);
 
@@ -30,14 +30,14 @@ void print_philosophers_data(t_philosophers_data *p_data)
 	}
 }
 
-void print_forks_id(t_philosophers_data *pData, t_forks_array *forks)
+void print_forks_id(t_philosophers_data *pData)
 {
 	int i;
 
 	i = 0;
 	while (i < pData->number_of_forks)
 	{
-		printf("fork_ id: %d\n", forks->fork_array[i].id);
+		printf("fork_ id: %d\n", pData->forks_array[i].id);
 		i++;
 	}
 

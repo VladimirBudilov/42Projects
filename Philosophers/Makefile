@@ -21,8 +21,12 @@ OBJ_PATH = objects/
 SRC		= forks.c\
           main.c\
           main_tools.c\
-          validation_tools_part1.c\
-          tests.c
+          philosophers.c\
+          tests.c\
+          thread.c\
+          thread_inner.c\
+          time.c\
+          validation_tools_part1.c
 
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
