@@ -1,0 +1,3 @@
+/Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug/CMakeFiles/Philosophers.dir
+/Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

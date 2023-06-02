@@ -1,0 +1,10 @@
+/private/var/folders/zz/zyxvpxvq6csfxvn_n000ch7400341s/T/AppTranslocation/BFD6AD0B-E2BD-4F11-AAE7-668AE963FC5D/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/private/var/folders/zz/zyxvpxvq6csfxvn_n000ch7400341s/T/AppTranslocation/BFD6AD0B-E2BD-4F11-AAE7-668AE963FC5D/d/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/vbudilov/Desktop/42PROJECTS/philo -B /Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug
+-- The C compiler identification is AppleClang 11.0.0.11000033
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug
