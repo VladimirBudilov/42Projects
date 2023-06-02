@@ -1,41 +1,32 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: vbudilov <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/22 18:56:15 by vbudilov          #+#    #+#              #
-#    Updated: 2023/05/22 18:56:17 by vbudilov         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME	= philo
 
 CC		= gcc
-CFLAGS	= -Wall -Werror -Wextra #-fsanitize=address
+
+CFLAGS	= -Wall -Werror -Wextra -g -fsanitize=thread
 
 SRC_PATH = sources/
 OBJ_PATH = objects/
 
-SRC		= check_tools.c\
+SRC		= check_tools_1.c\
+          check_tools_2.c\
           forks.c\
           main.c\
           main_tools.c\
           philosophers.c\
-          tests.c\
           thread.c\
-          thread_inner.c\
+          thread_inner_1.c\
+          thread_inner_2.c\
           time.c\
-          validation_tools_part1.c
+          validation_tools_1.c\
+          validation_tools_2.c
 
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
 OBJS	= $(addprefix $(OBJ_PATH), $(OBJ))
-INCS	= -I ./includes/push_swap.h
+INCS	= -I ./includes/philosophers.h
 
-all: $(OBJ_PATH) $(NAME) $(LIBFT)
+all: $(OBJ_PATH) $(NAME)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	$(CC) $(CFLAGS) -c $< -o $@
