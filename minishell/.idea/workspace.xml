@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99e0d4c0-6554-48a8-b4f6-937a1f770930" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/Philosophers.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/reply/cache-v2-e4db2060e5b55dd6c33b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-501b304f510d0e4af5c7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/3.25.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/check_tools.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/forks.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/main_tools.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/philosophers.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/tests.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/thread.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/thread_inner.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/time.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/Philosophers.dir/sources/validation_tools_part1.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/Philosophers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/includes/philosophers.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/forks.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/main_tools.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/philosophers.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/thread.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/objects/time.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/philo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/check_tools_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/check_tools_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/forks.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/main_tools.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/philosophers.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/thread.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/thread_inner_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/thread_inner_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/time.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/validation_tools_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../philo/sources/validation_tools_2.c" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.2" />
+  </component>
+  <component name="ProjectId" id="2QrsXMLFSsUdadvH1ioNApyh8Rz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vbudilov/Desktop/42PROJECTS/minishell&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99e0d4c0-6554-48a8-b4f6-937a1f770930" name="Changes" comment="" />
+      <created>1686123075368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686123075368</updated>
+      <workItem from="1686123086787" duration="627000" />
+      <workItem from="1686131610985" duration="154000" />
+      <workItem from="1686140345247" duration="61000" />
+      <workItem from="1687853339134" duration="295000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+</project>
