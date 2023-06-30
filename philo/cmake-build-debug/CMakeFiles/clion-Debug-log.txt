@@ -1,4 +1,1 @@
-/private/var/folders/zz/zyxvpxvq6csfxvn_n000ch7400341s/T/AppTranslocation/BFD6AD0B-E2BD-4F11-AAE7-668AE963FC5D/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/private/var/folders/zz/zyxvpxvq6csfxvn_n000ch7400341s/T/AppTranslocation/BFD6AD0B-E2BD-4F11-AAE7-668AE963FC5D/d/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/vbudilov/Desktop/42PROJECTS/philo -B /Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/vbudilov/Desktop/42PROJECTS/philo/cmake-build-debug
+CMakeLists.txt not found in /Users/vbudilov/Desktop/42PROJECTS/philo Select CMakeLists.txt
