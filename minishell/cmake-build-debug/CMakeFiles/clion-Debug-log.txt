@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /Users/vbudilov/Desktop/42PROJECTS/minishell Select CMakeLists.txt
